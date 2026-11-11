@@ -1,0 +1,157 @@
+/* ===== VARIABLES DE JEOPARDY ===== */
+:root {
+    --color-primario: #010736;        /* Azul oscuro (navbar, botones) */
+    --color-secundario: #1B365D;      /* Azul medio (body, hover) */
+    --color-tablero: #0B2F9F;         /* Azul brillante (tablero) */
+    --color-amarillo: #EEE3B0;        /* Amarillo claro (hover, destacados) */
+    --color-amarillo-oscuro: #F6ECA9; /* Amarillo para celdas destacadas */
+    --color-borde-sutil: rgba(255, 255, 255, 0.3);
+    --color-borde: white;
+}
+
+/* ===== BODY ===== */
+body {
+    background-color: var(--color-secundario);
+}
+
+/* ===== NAVBAR ===== */
+.navbar-jeopardy {
+    background-color: var(--color-primario);
+}
+
+.navbar-jeopardy .navbar-brand,
+.navbar-jeopardy .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-jeopardy .navbar-brand:hover,
+.navbar-jeopardy .navbar-nav .nav-link:hover {
+    color: var(--color-amarillo);
+}
+
+.navbar-jeopardy .btn-outline-light:hover {
+    background-color: var(--color-amarillo);
+    border-color: var(--color-amarillo);
+    color: var(--color-primario);
+}
+
+/* ===== BOTONES BASE ===== */
+.btn-jeopardy {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-jeopardy:hover {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+.btn.registrarse,
+.btn.ingresar,
+.btn.inicial {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.btn.registrarse:hover,
+.btn.ingresar:hover {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+.btn.inicial:hover {
+    background-color: var(--color-amarillo);
+    color: black;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.container.principal {
+    color: white;
+}
+
+.linea-separacion {
+    border: none;
+    height: 2px;
+    background-color: var(--color-amarillo);
+    opacity: 1;
+    margin: 20px 0;
+}
+
+.categorias {
+    background-color: var(--color-tablero);
+    color: white;
+}
+
+.categorias:hover {
+    background-color: var(--color-amarillo-oscuro);
+    color: var(--color-tablero);
+}
+
+/* ===== MODAL EXPLICACIÓN ===== */
+.divisor {
+    border-right: 1px solid #dee2e6;
+    padding-right: 20px; 
+}
+
+@media (max-width: 767px) {
+    .divisor {
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+        padding-right: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.bg-tablero {
+    background-color: var(--color-tablero);
+    color: white;
+}
+
+.tablero-tabla {
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+
+.tablero-tabla th {
+    font-size: 0.85rem;
+    padding: 8px 4px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 25% !important;
+}
+
+.caja-tablero {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tabla-opciones {
+    width: 100%;
+    color: white;
+}
+
+.tabla-opciones th {
+    border:  1px solid var(--color-borde) !important;
+    padding: 15px 20px !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.th-destacado {
+    background-color: var(--color-amarillo-oscuro);
+    color: var(--color-tablero);
+}

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-sm navbar-jeopardy">
+        <a class="navbar-brand" href="#">JEOPARDY</a>
+
+        <div class="flex-grow-1">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control col-lg-8 mx-3" type="text" placeholder="Busca tableros, preguntas, categorías, etc...">
+                <button class="btn btn-outline-light col-lg-2" type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdowCuenta" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cuenta</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownCuenta">
+                        <a class="dropdown-item" href="#" data-target="#login" data-toggle="modal">Ingresar</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#registro">Registrarse</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Continuar como invitado</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownPartidas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Partidas</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownPartidas">
+                        <a class="dropdown-item" href="#" data-target="#login" data-toggle="modal">Nueva partida</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#registro">Mis partidas</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Ver historial</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+     <main class="container mt-5 principal">
+
+        <div class="text-center">
+
+            <h1>Desafía tu mente en el <br> clásico juego de trivia</h1>
+            <button type="submit" class="btn inicial">¡Jugar ahora!</button>
+            <button type="button" class="btn inicial" data-toggle="modal" data-target="#explicacion">¿Cómo jugar?</button>
+
+        </div>
+
+        <hr class="linea-separacion">
+
+        <div class="container my-5">
+            <div class="row">
+                
+                <div class="col-md-6">
+                
+                    <h3 class="fw-bold mb-4">Tops 3 de la semana</h3>
+
+                    <div class="ms-4">
+
+                        <div class="mb-3">
+                            <h5 class="fw-bold mb-1">🥇 1. @AlexGamer — 14,500 pts</h5>
+                            <p style="color: #C5DFF8">
+                                Dominó la ronda final duplicando sus puntos en la categoría de Ciencia y Tecnología sin cometer errores.
+                            </p>
+                        </div>
+
+                        <div class="mb-3">
+                            <h5 class="fw-bold mb-1">🥈 2. @SofiaTrivia — 12,200 pts</h5>
+                            <p style="color: #C5DFF8">
+                                Consiguió una racha de 8 respuestas seguidas en Cultura Pop.
+                            </p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="fw-bold mb-1">🥉 3. @Carlos_99 — 10,800 pts</h5>
+                            <p style="color: #C5DFF8">
+                                Remontó en los últimos segundos acertando la pregunta más difícil de Historia Universal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#" class="btn inicial px-4">Ver tabla completa</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-center mt-4 mt-md-0">
+                    <div class="text-white">
+                        <h4 class="mb-3">Categorías recomendadas</h4>
+                        
+                        <div class="row gx-3 gy-4 mb-4">
+                            <div class="col-6 mb-4">
+                                <a href="#" class="card categorias text-decoration-none p-3 h-100">
+                                    <h6 class="mb-1">Cultura Pop</h6>
+                                    <small>Cine, series y música</small>
+                                </a>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <a href="#" class="card categorias text-decoration-none p-3 h-100">
+                                    <h6 class="mb-1">Geografía</h6>
+                                    <small>Países, capitales y mapas</small>
+                                </a>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <a href="#" class="card categorias text-decoration-none p-3 h-100">
+                                    <h6 class="mb-1">Ciencia</h6>
+                                    <small>Naturaleza y tecnología</small>
+                                </a>
+                            </div>
+                            <div class="col-6 mb-4">
+                                <a href="#" class="card categorias text-decoration-none p-3 h-100">
+                                    <h6 class="mb-1">Historia</h6>
+                                    <small>Eventos y personajes</small>
+                                </a>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn inicial btn-lg w-100 fw-bold">
+                            ¡Jugar partida clásica!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal para explicación del juego -->
+    <div class="modal fade" id="explicacion" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title">¿Cómo jugar?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row text-center">
+                        <div class="col-md-4 divisor p-3 d-flex flex-column">
+                            <h5 class="mb-2"><span class="badge bg-primary rounded-circle">1</span>&emsp;Elige una categoría y puntaje</h5>
+                            
+                            <table class="table table-bordered bg-tablero tablero-tabla text-center mb-0 flex-grow-1">
+                                <thead>
+                                    <tr>
+                                        <th class="border-light">Historia</th>
+                                        <th class="border-light th-destacado">Geografía</th>
+                                        <th class="border-light">Lógica</th>
+                                        <th class="border-light">Literatura</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="border-light">100</th>
+                                        <th class="border-light">100</th>
+                                        <th class="border-light">100</th>
+                                        <th class="border-light">100</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="border-light">200</th>
+                                        <th class="border-light">200</th>
+                                        <th class="border-light">200</th>
+                                        <th class="border-light">200</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="border-light">300</th>
+                                        <th class="border-light th-destacado">300</th>
+                                        <th class="border-light">300</th>
+                                        <th class="border-light">300</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="border-light">400</th>
+                                        <th class="border-light">400</th>
+                                        <th class="border-light">400</th>
+                                        <th class="border-light">400</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="border-light">500</th>
+                                        <th class="border-light">500</th>
+                                        <th class="border-light">500</th>
+                                        <th class="border-light">500</th>
+                                    </tr>
+                                </thead>
+                            </table>
+
+                            <p class="m-3 text-justify">Selecciona la categoría de tu elección y después elige la puntuación (usualmente son puntuaciones desde 100 hasta 500)</p>
+
+                        </div>
+
+                        <div class="col-md-4 divisor p-3 d-flex flex-column">
+                            <h5 class="mb-2"><span class="badge bg-primary rounded-circle">2</span>&emsp;Responde a tiempo</h5>
+                            <div class="bg-tablero flex-grow-1">
+                                
+                                <div class="text-center mb-3 p-3">
+                                    <strong>Geografía</strong>
+                                    <br>
+                                    <strong>Puntuación:</strong> 300 &emsp;
+                                    <strong>20s</strong> &emsp;
+                                    <i class="fas fa-hourglass-half"></i>
+                                </div>
+
+                                <p class="text-center mb-3 p-3">
+                                    <strong>Pista:</strong> Es el único país del mundo que cuenta con costas tanto en el océano Atlántico como en el océano Índico.
+                                </p>
+
+                                <div class="bg-tablero">
+                                    <table class="table tabla-opciones text-center mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Kenia</th>
+                                                <th class="th-destacado">Sudáfrica</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Mozambique</th>
+                                                <th>Namibia</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <p class="m-3 text-justify">Elige la respuesta correcta en el tiempo determinado.</p>
+
+                        </div>
+
+                        <div class="col-md-4 p-3 d-flex flex-column">
+                            <h5 class="mb-2"><span class="badge bg-primary rounded-circle">3</span>&emsp;Acumula puntos</h5>
+                            <div class="bg-tablero flex-grow-1">
+
+                                <div class="text-center mb-3 p-3">
+                                    <strong><h4>¡RESPUESTA CORRECTA!</h4></strong>
+                                    <i class="fas fa-trophy text-warning fa-2x mb-3"></i>
+                                    <br>
+                                    <strong><h3>Sudáfrica</h3></strong>
+                                    <br>
+                                    <p>
+                                    <strong style="color: #f5e99e">Puntuaje obtenido:</strong> 300
+                                    <br>
+                                    <strong style="color: #f5e99e">Puntuaje total:</strong> 800
+                                    <br><br>
+                                    Avanza a la siguiente ronda.</p>
+                                </div>
+                            </div>
+
+                            <p class="m-3 text-justify">Suma puntos para escalar en la tabla global de jugadores!</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para login -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title">Ingresar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form id="formLogin" action="">
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            
+                            <div class="form-group">
+                                <label for="correo">Correo</label>
+                                <div class="input-group">
+                                    <!-- Campo para ingresar correo -->
+                                    <input type="email" name="correo" id="correo" class="form-control" placeholder="Ingresa tu correo" required>
+                                    <!-- input-group-append para poner los íconos a la derecha -->
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="input-group">
+                                    <!-- Campo para ingresar contraseña -->
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Ingresa tu contraseña" required>
+                                    <!-- input-group-append para poner los íconos a la derecha -->
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-key" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Botón ingresar centrado usando Flexbox -->
+                            <div class="form-group d-flex justify-content-center mt-4">
+                                <button type="submit" class="btn ingresar btn-block">Ingresar</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer d-flex justify-content-end">
+                        <span>No tienes cuenta? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registro">Regístrate aquí</a></span>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal registro -->
+    <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar usuario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- Campo para ingresar nombre -->
+                                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre(s)" required>
+                            </div>
+                            <div class="col-6">
+                                <!-- Campo para ingresar apellidos -->
+                                <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellidos" required>
+                            </div>
+                        </div>
+
+                        <!-- Campo para ingresar correo -->
+                        <input type="email" name="correo" id="correo_registro" class="form-control mt-3" placeholder="Correo" required>
+                        <!-- Campo para ingresar contraseña -->
+                        <input type="password" name="password" id="password_registro" class="form-control mt-3" placeholder="Contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="La contraseña debe tener al menos 6 caracteres, incluir al menos una letra mayúscula, una minúscula y un número." required>
+                        <!-- Campo para ingresar confirmación de contraseña -->
+                        <input type="password" name="password_confirm" id="password_confirm" class="form-control mt-3" placeholder="Confirmar contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="La contraseña debe tener al menos 6 caracteres, incluir al menos una letra mayúscula, una minúscula y un número." required>
+
+                        <!-- Botón registrarse centrado usando Flexbox -->
+                            <div class="form-group d-flex justify-content-center mt-4">
+                                <button type="submit" class="btn registrarse btn-block">Registrarse</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para añadir al carrito -->
+    <div class="modal fade" id="addToCart" tabindex="-1" role="dialog" aria-labelledby="addToCartLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        
+        <!-- Encabezado con título y botón de cerrar -->
+        <div class="modal-header">
+            <h5 class="modal-title font-weight-bold" id="addToCartLabel">Escoge la cantidad a agregar:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <!-- Cuerpo para el input de cantidad y botones -->
+        <div class="modal-body">
+            <div class="form-group mb-3">
+            <input type="number" id="productQuantity" class="form-control" value="1" min="1">
+            </div>
+            
+            <div class="d-flex align-items-center">
+            <button type="button" class="btn btn-success mr-2" id="btnConfirmAddToCart" data-dismiss="modal">Agregar</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+      
+    <!-- Optional JavaScript -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+  </body>
+</html>
