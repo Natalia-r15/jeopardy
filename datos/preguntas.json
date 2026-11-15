@@ -1,0 +1,247 @@
+[
+  {
+    "id": 1,
+    "categoriaId": 1,
+    "texto": "¿En qué país se construyeron las pirámides de Guiza?",
+    "dificultad": "Inicial",
+    "puntos": 100
+  },
+  {
+    "id": 2,
+    "categoriaId": 1,
+    "texto": "¿En qué año inició la Independencia de México?",
+    "dificultad": "Fácil",
+    "puntos": 200
+  },
+  {
+    "id": 3,
+    "categoriaId": 1,
+    "texto": "¿En qué año cayó el Muro de Berlín?",
+    "dificultad": "Media",
+    "puntos": 300
+  },
+  {
+    "id": 4,
+    "categoriaId": 1,
+    "texto": "¿Qué civilización construyó Machu Picchu?",
+    "dificultad": "Difícil",
+    "puntos": 400
+  },
+  {
+    "id": 5,
+    "categoriaId": 1,
+    "texto": "¿En qué año se firmó la Carta Magna inglesa?",
+    "dificultad": "Experta",
+    "puntos": 500
+  },
+  {
+    "id": 6,
+    "categoriaId": 2,
+    "texto": "¿Cuál es el símbolo químico del oxígeno?",
+    "dificultad": "Inicial",
+    "puntos": 100
+  },
+  {
+    "id": 7,
+    "categoriaId": 2,
+    "texto": "¿Qué planeta es el más grande del sistema solar?",
+    "dificultad": "Fácil",
+    "puntos": 200
+  },
+  {
+    "id": 8,
+    "categoriaId": 2,
+    "texto": "¿Qué órgano produce insulina?",
+    "dificultad": "Media",
+    "puntos": 300
+  },
+  {
+    "id": 9,
+    "categoriaId": 2,
+    "texto": "¿En qué unidad se mide la resistencia eléctrica?",
+    "dificultad": "Difícil",
+    "puntos": 400
+  },
+  {
+    "id": 10,
+    "categoriaId": 2,
+    "texto": "¿Qué partícula tiene carga eléctrica negativa?",
+    "dificultad": "Experta",
+    "puntos": 500
+  },
+  {
+    "id": 11,
+    "categoriaId": 3,
+    "texto": "¿Cuál es la capital de México?",
+    "dificultad": "Inicial",
+    "puntos": 100
+  },
+  {
+    "id": 12,
+    "categoriaId": 3,
+    "texto": "¿En qué continente está Kenia?",
+    "dificultad": "Fácil",
+    "puntos": 200
+  },
+  {
+    "id": 13,
+    "categoriaId": 3,
+    "texto": "¿Cuál es la capital de Canadá?",
+    "dificultad": "Media",
+    "puntos": 300
+  },
+  {
+    "id": 14,
+    "categoriaId": 3,
+    "texto": "¿Qué país tiene como capital a Ulán Bator?",
+    "dificultad": "Difícil",
+    "puntos": 400
+  },
+  {
+    "id": 15,
+    "categoriaId": 3,
+    "texto": "¿Qué estrecho separa España de Marruecos?",
+    "dificultad": "Experta",
+    "puntos": 500
+  },
+  {
+    "id": 16,
+    "categoriaId": 4,
+    "texto": "¿Cómo se llama el vaquero de Toy Story?",
+    "dificultad": "Inicial",
+    "puntos": 100
+  },
+  {
+    "id": 17,
+    "categoriaId": 4,
+    "texto": "¿En qué saga aparece Darth Vader?",
+    "dificultad": "Fácil",
+    "puntos": 200
+  },
+  {
+    "id": 18,
+    "categoriaId": 4,
+    "texto": "¿Qué grupo lanzó Bohemian Rhapsody?",
+    "dificultad": "Media",
+    "puntos": 300
+  },
+  {
+    "id": 19,
+    "categoriaId": 4,
+    "texto": "¿Quién dirigió El laberinto del fauno?",
+    "dificultad": "Difícil",
+    "puntos": 400
+  },
+  {
+    "id": 20,
+    "categoriaId": 4,
+    "texto": "¿Qué álbum de estudio de Daft Punk salió en 2013?",
+    "dificultad": "Experta",
+    "puntos": 500
+  },
+  {
+    "id": 21,
+    "categoriaId": 5,
+    "texto": "¿Quién escribió Don Quijote de la Mancha?",
+    "dificultad": "Inicial",
+    "puntos": 100
+  },
+  {
+    "id": 22,
+    "categoriaId": 5,
+    "texto": "¿Cómo se apellidan Romeo y Julieta?",
+    "dificultad": "Fácil",
+    "puntos": 200
+  },
+  {
+    "id": 23,
+    "categoriaId": 5,
+    "texto": "¿Quién escribió Cien años de soledad?",
+    "dificultad": "Media",
+    "puntos": 300
+  },
+  {
+    "id": 24,
+    "categoriaId": 5,
+    "texto": "¿En qué pueblo transcurre Pedro Páramo?",
+    "dificultad": "Difícil",
+    "puntos": 400
+  },
+  {
+    "id": 25,
+    "categoriaId": 5,
+    "texto": "¿Quién escribió El libro de arena?",
+    "dificultad": "Experta",
+    "puntos": 500
+  },
+  {
+    "id": 26,
+    "categoriaId": 6,
+    "texto": "¿Cuántos jugadores por equipo inician un partido de fútbol en cancha?",
+    "dificultad": "Inicial",
+    "puntos": 100
+  },
+  {
+    "id": 27,
+    "categoriaId": 6,
+    "texto": "¿En qué deporte compite la NBA?",
+    "dificultad": "Fácil",
+    "puntos": 200
+  },
+  {
+    "id": 28,
+    "categoriaId": 6,
+    "texto": "¿En qué superficie se juega Wimbledon?",
+    "dificultad": "Media",
+    "puntos": 300
+  },
+  {
+    "id": 29,
+    "categoriaId": 6,
+    "texto": "¿Cuántas pruebas tiene un decatlón?",
+    "dificultad": "Difícil",
+    "puntos": 400
+  },
+  {
+    "id": 30,
+    "categoriaId": 6,
+    "texto": "¿Qué país ganó el primer Mundial masculino de fútbol?",
+    "dificultad": "Experta",
+    "puntos": 500
+  },
+  {
+    "id": 31,
+    "categoriaId": 7,
+    "texto": "¿Quién pintó la Mona Lisa?",
+    "dificultad": "Inicial",
+    "puntos": 100
+  },
+  {
+    "id": 32,
+    "categoriaId": 7,
+    "texto": "¿Quién pintó La noche estrellada?",
+    "dificultad": "Fácil",
+    "puntos": 200
+  },
+  {
+    "id": 33,
+    "categoriaId": 7,
+    "texto": "¿Quién pintó Guernica?",
+    "dificultad": "Media",
+    "puntos": 300
+  },
+  {
+    "id": 34,
+    "categoriaId": 7,
+    "texto": "¿Qué artista pintó Las dos Fridas?",
+    "dificultad": "Difícil",
+    "puntos": 400
+  },
+  {
+    "id": 35,
+    "categoriaId": 7,
+    "texto": "¿Con qué movimiento se asocia a Piet Mondrian?",
+    "dificultad": "Experta",
+    "puntos": 500
+  }
+]

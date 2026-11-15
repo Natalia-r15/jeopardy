@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nombre": "Historia"
+  },
+  {
+    "id": 2,
+    "nombre": "Ciencia"
+  },
+  {
+    "id": 3,
+    "nombre": "Geografía"
+  },
+  {
+    "id": 4,
+    "nombre": "Cultura pop"
+  },
+  {
+    "id": 5,
+    "nombre": "Literatura"
+  },
+  {
+    "id": 6,
+    "nombre": "Deportes"
+  },
+  {
+    "id": 7,
+    "nombre": "Arte"
+  }
+]

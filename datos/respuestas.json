@@ -1,0 +1,632 @@
+[
+  {
+    "id": 1,
+    "preguntaId": 1,
+    "texto": "Egipto",
+    "correcta": true
+  },
+  {
+    "id": 2,
+    "preguntaId": 1,
+    "texto": "Grecia",
+    "correcta": false
+  },
+  {
+    "id": 3,
+    "preguntaId": 1,
+    "texto": "Italia",
+    "correcta": false
+  },
+  {
+    "id": 4,
+    "preguntaId": 2,
+    "texto": "1821",
+    "correcta": false
+  },
+  {
+    "id": 5,
+    "preguntaId": 2,
+    "texto": "1910",
+    "correcta": false
+  },
+  {
+    "id": 6,
+    "preguntaId": 2,
+    "texto": "1810",
+    "correcta": true
+  },
+  {
+    "id": 7,
+    "preguntaId": 3,
+    "texto": "1979",
+    "correcta": false
+  },
+  {
+    "id": 8,
+    "preguntaId": 3,
+    "texto": "1989",
+    "correcta": true
+  },
+  {
+    "id": 9,
+    "preguntaId": 3,
+    "texto": "1999",
+    "correcta": false
+  },
+  {
+    "id": 10,
+    "preguntaId": 4,
+    "texto": "Inca",
+    "correcta": true
+  },
+  {
+    "id": 11,
+    "preguntaId": 4,
+    "texto": "Maya",
+    "correcta": false
+  },
+  {
+    "id": 12,
+    "preguntaId": 4,
+    "texto": "Olmeca",
+    "correcta": false
+  },
+  {
+    "id": 13,
+    "preguntaId": 5,
+    "texto": "1415",
+    "correcta": false
+  },
+  {
+    "id": 14,
+    "preguntaId": 5,
+    "texto": "1512",
+    "correcta": false
+  },
+  {
+    "id": 15,
+    "preguntaId": 5,
+    "texto": "1215",
+    "correcta": true
+  },
+  {
+    "id": 16,
+    "preguntaId": 6,
+    "texto": "H",
+    "correcta": false
+  },
+  {
+    "id": 17,
+    "preguntaId": 6,
+    "texto": "N",
+    "correcta": false
+  },
+  {
+    "id": 18,
+    "preguntaId": 6,
+    "texto": "O",
+    "correcta": true
+  },
+  {
+    "id": 19,
+    "preguntaId": 7,
+    "texto": "Saturno",
+    "correcta": false
+  },
+  {
+    "id": 20,
+    "preguntaId": 7,
+    "texto": "Júpiter",
+    "correcta": true
+  },
+  {
+    "id": 21,
+    "preguntaId": 7,
+    "texto": "Neptuno",
+    "correcta": false
+  },
+  {
+    "id": 22,
+    "preguntaId": 8,
+    "texto": "Páncreas",
+    "correcta": true
+  },
+  {
+    "id": 23,
+    "preguntaId": 8,
+    "texto": "Hígado",
+    "correcta": false
+  },
+  {
+    "id": 24,
+    "preguntaId": 8,
+    "texto": "Riñón",
+    "correcta": false
+  },
+  {
+    "id": 25,
+    "preguntaId": 9,
+    "texto": "Vatio",
+    "correcta": false
+  },
+  {
+    "id": 26,
+    "preguntaId": 9,
+    "texto": "Amperio",
+    "correcta": false
+  },
+  {
+    "id": 27,
+    "preguntaId": 9,
+    "texto": "Ohmio",
+    "correcta": true
+  },
+  {
+    "id": 28,
+    "preguntaId": 10,
+    "texto": "Protón",
+    "correcta": false
+  },
+  {
+    "id": 29,
+    "preguntaId": 10,
+    "texto": "Electrón",
+    "correcta": true
+  },
+  {
+    "id": 30,
+    "preguntaId": 10,
+    "texto": "Neutrón",
+    "correcta": false
+  },
+  {
+    "id": 31,
+    "preguntaId": 11,
+    "texto": "Guadalajara",
+    "correcta": false
+  },
+  {
+    "id": 32,
+    "preguntaId": 11,
+    "texto": "Ciudad de México",
+    "correcta": true
+  },
+  {
+    "id": 33,
+    "preguntaId": 11,
+    "texto": "Monterrey",
+    "correcta": false
+  },
+  {
+    "id": 34,
+    "preguntaId": 12,
+    "texto": "África",
+    "correcta": true
+  },
+  {
+    "id": 35,
+    "preguntaId": 12,
+    "texto": "Asia",
+    "correcta": false
+  },
+  {
+    "id": 36,
+    "preguntaId": 12,
+    "texto": "Europa",
+    "correcta": false
+  },
+  {
+    "id": 37,
+    "preguntaId": 13,
+    "texto": "Toronto",
+    "correcta": false
+  },
+  {
+    "id": 38,
+    "preguntaId": 13,
+    "texto": "Montreal",
+    "correcta": false
+  },
+  {
+    "id": 39,
+    "preguntaId": 13,
+    "texto": "Ottawa",
+    "correcta": true
+  },
+  {
+    "id": 40,
+    "preguntaId": 14,
+    "texto": "Nepal",
+    "correcta": false
+  },
+  {
+    "id": 41,
+    "preguntaId": 14,
+    "texto": "Mongolia",
+    "correcta": true
+  },
+  {
+    "id": 42,
+    "preguntaId": 14,
+    "texto": "Bután",
+    "correcta": false
+  },
+  {
+    "id": 43,
+    "preguntaId": 15,
+    "texto": "Gibraltar",
+    "correcta": true
+  },
+  {
+    "id": 44,
+    "preguntaId": 15,
+    "texto": "Bering",
+    "correcta": false
+  },
+  {
+    "id": 45,
+    "preguntaId": 15,
+    "texto": "Ormuz",
+    "correcta": false
+  },
+  {
+    "id": 46,
+    "preguntaId": 16,
+    "texto": "Woody",
+    "correcta": true
+  },
+  {
+    "id": 47,
+    "preguntaId": 16,
+    "texto": "Buzz",
+    "correcta": false
+  },
+  {
+    "id": 48,
+    "preguntaId": 16,
+    "texto": "Rex",
+    "correcta": false
+  },
+  {
+    "id": 49,
+    "preguntaId": 17,
+    "texto": "Star Trek",
+    "correcta": false
+  },
+  {
+    "id": 50,
+    "preguntaId": 17,
+    "texto": "Dune",
+    "correcta": false
+  },
+  {
+    "id": 51,
+    "preguntaId": 17,
+    "texto": "Star Wars",
+    "correcta": true
+  },
+  {
+    "id": 52,
+    "preguntaId": 18,
+    "texto": "ABBA",
+    "correcta": false
+  },
+  {
+    "id": 53,
+    "preguntaId": 18,
+    "texto": "Queen",
+    "correcta": true
+  },
+  {
+    "id": 54,
+    "preguntaId": 18,
+    "texto": "The Beatles",
+    "correcta": false
+  },
+  {
+    "id": 55,
+    "preguntaId": 19,
+    "texto": "Guillermo del Toro",
+    "correcta": true
+  },
+  {
+    "id": 56,
+    "preguntaId": 19,
+    "texto": "Alfonso Cuarón",
+    "correcta": false
+  },
+  {
+    "id": 57,
+    "preguntaId": 19,
+    "texto": "Alejandro González Iñárritu",
+    "correcta": false
+  },
+  {
+    "id": 58,
+    "preguntaId": 20,
+    "texto": "Discovery",
+    "correcta": false
+  },
+  {
+    "id": 59,
+    "preguntaId": 20,
+    "texto": "Homework",
+    "correcta": false
+  },
+  {
+    "id": 60,
+    "preguntaId": 20,
+    "texto": "Random Access Memories",
+    "correcta": true
+  },
+  {
+    "id": 61,
+    "preguntaId": 21,
+    "texto": "Lope de Vega",
+    "correcta": false
+  },
+  {
+    "id": 62,
+    "preguntaId": 21,
+    "texto": "Francisco de Quevedo",
+    "correcta": false
+  },
+  {
+    "id": 63,
+    "preguntaId": 21,
+    "texto": "Miguel de Cervantes",
+    "correcta": true
+  },
+  {
+    "id": 64,
+    "preguntaId": 22,
+    "texto": "Ríos y Torres",
+    "correcta": false
+  },
+  {
+    "id": 65,
+    "preguntaId": 22,
+    "texto": "Montesco y Capuleto",
+    "correcta": true
+  },
+  {
+    "id": 66,
+    "preguntaId": 22,
+    "texto": "Bennet y Darcy",
+    "correcta": false
+  },
+  {
+    "id": 67,
+    "preguntaId": 23,
+    "texto": "Gabriel García Márquez",
+    "correcta": true
+  },
+  {
+    "id": 68,
+    "preguntaId": 23,
+    "texto": "Juan Rulfo",
+    "correcta": false
+  },
+  {
+    "id": 69,
+    "preguntaId": 23,
+    "texto": "Julio Cortázar",
+    "correcta": false
+  },
+  {
+    "id": 70,
+    "preguntaId": 24,
+    "texto": "Macondo",
+    "correcta": false
+  },
+  {
+    "id": 71,
+    "preguntaId": 24,
+    "texto": "Santa María",
+    "correcta": false
+  },
+  {
+    "id": 72,
+    "preguntaId": 24,
+    "texto": "Comala",
+    "correcta": true
+  },
+  {
+    "id": 73,
+    "preguntaId": 25,
+    "texto": "Octavio Paz",
+    "correcta": false
+  },
+  {
+    "id": 74,
+    "preguntaId": 25,
+    "texto": "Jorge Luis Borges",
+    "correcta": true
+  },
+  {
+    "id": 75,
+    "preguntaId": 25,
+    "texto": "Isabel Allende",
+    "correcta": false
+  },
+  {
+    "id": 76,
+    "preguntaId": 26,
+    "texto": "9",
+    "correcta": false
+  },
+  {
+    "id": 77,
+    "preguntaId": 26,
+    "texto": "11",
+    "correcta": true
+  },
+  {
+    "id": 78,
+    "preguntaId": 26,
+    "texto": "12",
+    "correcta": false
+  },
+  {
+    "id": 79,
+    "preguntaId": 27,
+    "texto": "Baloncesto",
+    "correcta": true
+  },
+  {
+    "id": 80,
+    "preguntaId": 27,
+    "texto": "Béisbol",
+    "correcta": false
+  },
+  {
+    "id": 81,
+    "preguntaId": 27,
+    "texto": "Hockey",
+    "correcta": false
+  },
+  {
+    "id": 82,
+    "preguntaId": 28,
+    "texto": "Arcilla",
+    "correcta": false
+  },
+  {
+    "id": 83,
+    "preguntaId": 28,
+    "texto": "Pista dura",
+    "correcta": false
+  },
+  {
+    "id": 84,
+    "preguntaId": 28,
+    "texto": "Césped",
+    "correcta": true
+  },
+  {
+    "id": 85,
+    "preguntaId": 29,
+    "texto": "7",
+    "correcta": false
+  },
+  {
+    "id": 86,
+    "preguntaId": 29,
+    "texto": "10",
+    "correcta": true
+  },
+  {
+    "id": 87,
+    "preguntaId": 29,
+    "texto": "12",
+    "correcta": false
+  },
+  {
+    "id": 88,
+    "preguntaId": 30,
+    "texto": "Uruguay",
+    "correcta": true
+  },
+  {
+    "id": 89,
+    "preguntaId": 30,
+    "texto": "Italia",
+    "correcta": false
+  },
+  {
+    "id": 90,
+    "preguntaId": 30,
+    "texto": "Brasil",
+    "correcta": false
+  },
+  {
+    "id": 91,
+    "preguntaId": 31,
+    "texto": "Leonardo da Vinci",
+    "correcta": true
+  },
+  {
+    "id": 92,
+    "preguntaId": 31,
+    "texto": "Miguel Ángel",
+    "correcta": false
+  },
+  {
+    "id": 93,
+    "preguntaId": 31,
+    "texto": "Rafael",
+    "correcta": false
+  },
+  {
+    "id": 94,
+    "preguntaId": 32,
+    "texto": "Claude Monet",
+    "correcta": false
+  },
+  {
+    "id": 95,
+    "preguntaId": 32,
+    "texto": "Paul Cézanne",
+    "correcta": false
+  },
+  {
+    "id": 96,
+    "preguntaId": 32,
+    "texto": "Vincent van Gogh",
+    "correcta": true
+  },
+  {
+    "id": 97,
+    "preguntaId": 33,
+    "texto": "Salvador Dalí",
+    "correcta": false
+  },
+  {
+    "id": 98,
+    "preguntaId": 33,
+    "texto": "Pablo Picasso",
+    "correcta": true
+  },
+  {
+    "id": 99,
+    "preguntaId": 33,
+    "texto": "Joan Miró",
+    "correcta": false
+  },
+  {
+    "id": 100,
+    "preguntaId": 34,
+    "texto": "Frida Kahlo",
+    "correcta": true
+  },
+  {
+    "id": 101,
+    "preguntaId": 34,
+    "texto": "Remedios Varo",
+    "correcta": false
+  },
+  {
+    "id": 102,
+    "preguntaId": 34,
+    "texto": "Leonora Carrington",
+    "correcta": false
+  },
+  {
+    "id": 103,
+    "preguntaId": 35,
+    "texto": "Futurismo",
+    "correcta": false
+  },
+  {
+    "id": 104,
+    "preguntaId": 35,
+    "texto": "Realismo",
+    "correcta": false
+  },
+  {
+    "id": 105,
+    "preguntaId": 35,
+    "texto": "De Stijl",
+    "correcta": true
+  }
+]
