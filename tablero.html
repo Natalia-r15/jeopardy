@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablero | Jeopardy!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#contenido" class="sr-only sr-only-focusable">Saltar al contenido</a>
+  <header class="site-header"><nav class="container site-nav" aria-label="Navegación principal">
+  <a class="brand" href="home.html">JEOPARDY<span>!</span></a>
+  <div class="nav-links">
+    <a href="tablero.html">Tablero</a><a href="historial.html">Historial</a>
+    <a href="perfil.html">Perfil</a><a href="admin.html">Administración</a>
+  </div>
+  <div class="nav-actions">
+    <a class="btn btn-outline-light" href="#cuenta-ingresar" aria-haspopup="dialog">Ingresar</a>
+    <a class="btn btn-gold" href="#cuenta-registro" aria-haspopup="dialog">Registrarse</a>
+  </div>
+</nav></header>
+  <main id="contenido" class="container screen">
+    <section class="surface mb-4">
+      <h1>Lobby de partida</h1>
+      <div class="row">
+        <div class="col-md-8"><div class="form-group"><label for="partida">Nombre de la partida</label><input class="form-control" id="partida" type="text" value="Partida clásica"></div></div>
+        <div class="col-md-4 form-group"><label for="jugadores">Jugadores locales</label><select class="form-control" id="jugadores"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+      </div>
+      <fieldset class="mb-3"><legend class="h5">Categorías</legend><div class="actions">
+        <label class="answer"><input type="checkbox" checked> Historia</label>
+        <label class="answer"><input type="checkbox" checked> Ciencia</label>
+        <label class="answer"><input type="checkbox" checked> Geografía</label>
+        <label class="answer"><input type="checkbox" checked> Cultura pop</label>
+        <label class="answer"><input type="checkbox" checked> Literatura</label>
+        <label class="answer"><input type="checkbox" checked> Deportes</label>
+        <label class="answer"><input type="checkbox" checked> Arte</label>
+      </div></fieldset>
+      <a class="btn btn-gold" href="#partida-tablero">Ver tablero</a>
+    </section>
+    <section id="partida-tablero" aria-labelledby="tablero-titulo">
+      <h2 id="tablero-titulo">Partida clásica</h2>
+      <p class="muted">1 de 35 preguntas respondidas · Turno de Jugador 1</p>
+      <div class="table-responsive" tabindex="0" aria-label="Tablero desplazable">
+        <table class="table table-borderless table-dark board">
+          <thead><tr><th scope="col">Historia</th><th scope="col">Ciencia</th><th scope="col">Geografía</th><th scope="col">Cultura pop</th><th scope="col">Literatura</th><th scope="col">Deportes</th><th scope="col">Arte</th></tr></thead>
+          <tbody>
+            <tr><td><a class="btn tile" href="pregunta.html" aria-label="Historia, 100 puntos">100</a></td><td><span class="btn tile">100</span></td><td><span class="btn tile">100</span></td><td><span class="btn tile">100</span></td><td><span class="btn tile">100</span></td><td><span class="btn tile">100</span></td><td><span class="btn tile">100</span></td></tr>
+            <tr><td><span class="btn tile">200</span></td><td><span class="btn tile">200</span></td><td><span class="btn tile">200</span></td><td><span class="btn tile">200</span></td><td><span class="btn tile">200</span></td><td><span class="btn tile">200</span></td><td><span class="btn tile">200</span></td></tr>
+            <tr><td><span class="btn tile">300</span></td><td><span class="btn tile">300</span></td><td><button class="btn tile" type="button" disabled aria-label="Geografía, pregunta respondida incorrectamente">×</button></td><td><span class="btn tile">300</span></td><td><span class="btn tile">300</span></td><td><button class="btn tile" type="button" disabled aria-label="Geografía, pregunta respondida incorrectamente">×</button></td><td><span class="btn tile">300</span></td></tr>
+            <tr><td><span class="btn tile">400</span></td><td><span class="btn tile">400</span></td><td><span class="btn tile">400</span></td><td><span class="btn tile">400</span></td><td><span class="btn tile">400</span></td><td><span class="btn tile">400</span></td><td><span class="btn tile">400</span></td></tr>
+            <tr><td><span class="btn tile">500</span></td><td><span class="btn tile">500</span></td><td><span class="btn tile">500</span></td><td><span class="btn tile">500</span></td><td><span class="btn tile">500</span></td><td><span class="btn tile">500</span></td><td><span class="btn tile">500</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="actions mb-3"><span class="surface">Jugador 1 · 0 pts</span><span class="surface">Jugador 2 · 0 pts</span><span class="surface">Jugador 3 · 0 pts</span><span class="surface">Jugador 4 · 0 pts</span><span class="surface">Jugador 5 · 0 pts</span></div>
+      <div class="actions"><a class="btn btn-gold" href="resultado.html">Ver resultados</a> <button class="btn btn-outline-light" type="button">Reiniciar partida</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container site-nav">
+    <a class="brand" href="home.html">JEOPARDY<span>!</span></a>
+    <a href="home.html#como-jugar">Cómo jugar</a>
+  </div></footer>
+  <section class="auth-overlay" role="dialog" aria-labelledby="auth-titulo">
+    <a class="auth-shade" href="#contenido" tabindex="-1" aria-hidden="true"></a>
+    <div class="auth-panel">
+      <h2 class="sr-only" id="auth-titulo">Acceso a tu cuenta</h2>
+      <a class="auth-close" href="#contenido" aria-label="Cerrar ventana">×</a>
+      <nav class="auth-tabs" aria-label="Acceso a tu cuenta">
+        <a id="cuenta-ingresar" href="#cuenta-ingresar">Ingresar</a>
+        <a id="cuenta-registro" href="#cuenta-registro">Registrarse</a>
+      </nav>
+      <div class="auth-fields auth-login" role="group" aria-labelledby="cuenta-ingresar">
+        <div class="auth-field">
+          <label for="login-usuario">Correo electrónico / usuario</label>
+          <input class="form-control" id="login-usuario" type="text" autocomplete="username">
+        </div>
+        <div class="auth-field">
+          <label for="login-clave">Contraseña</label>
+          <input class="form-control" id="login-clave" type="password" autocomplete="current-password">
+        </div>
+        <button class="btn auth-submit" type="button">Ingresar</button>
+        <p class="auth-switch">¿No tienes cuenta? <a href="#cuenta-registro">Regístrate aquí</a></p>
+      </div>
+      <div class="auth-fields auth-register" role="group" aria-labelledby="cuenta-registro">
+        <div class="auth-field">
+          <label for="registro-correo">Correo electrónico</label>
+          <input class="form-control" id="registro-correo" type="email" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="registro-clave">Contraseña</label>
+          <input class="form-control" id="registro-clave" type="password" autocomplete="new-password">
+        </div>
+        <div class="auth-field">
+          <label for="registro-confirmar">Confirmar contraseña</label>
+          <input class="form-control" id="registro-confirmar" type="password" autocomplete="new-password">
+        </div>
+        <button class="btn auth-submit" type="button">Registrarte</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

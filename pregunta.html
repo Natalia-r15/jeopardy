@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pregunta | Jeopardy!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#contenido" class="sr-only sr-only-focusable">Saltar al contenido</a>
+  <header class="site-header"><nav class="container site-nav" aria-label="Navegación principal">
+  <a class="brand" href="home.html">JEOPARDY<span>!</span></a>
+  <div class="nav-links">
+    <a href="tablero.html">Tablero</a><a href="historial.html">Historial</a>
+    <a href="perfil.html">Perfil</a><a href="admin.html">Administración</a>
+  </div>
+  <div class="nav-actions">
+    <a class="btn btn-outline-light" href="#cuenta-ingresar" aria-haspopup="dialog">Ingresar</a>
+    <a class="btn btn-gold" href="#cuenta-registro" aria-haspopup="dialog">Registrarse</a>
+  </div>
+</nav></header>
+  <main id="contenido" class="container screen">
+    <section class="question mx-auto">
+      <p class="muted">Partida clásica · 1 de 35 preguntas respondidas</p>
+      <div class="surface">
+        <p class="text-warning">Historia · Inicial · 100 puntos</p>
+        <p class="muted">Tiempo restante · 30 s</p>
+        <h1 class="h2">¿En qué país se construyeron las pirámides de Guiza?</h1>
+        <fieldset><legend class="h6">Selecciona una respuesta</legend>
+          <label class="answer"><input type="radio" name="respuesta"> Egipto</label>
+          <label class="answer"><input type="radio" name="respuesta"> Grecia</label>
+          <label class="answer"><input type="radio" name="respuesta"> Italia</label>
+        </fieldset>
+        <div class="actions"><button class="btn btn-gold" type="button">Enviar respuesta</button> <a class="btn btn-outline-light" href="tablero.html#partida-tablero">Volver al tablero</a></div>
+      </div>
+      <aside class="surface mt-3"><h2 class="h5">Ejemplos de retroalimentación</h2>
+        <p class="alert alert-success">Respuesta correcta. +100 puntos.</p>
+        <p class="alert alert-warning mb-0">Respuesta incorrecta. La respuesta correcta era Egipto.</p>
+      </aside>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container site-nav">
+    <a class="brand" href="home.html">JEOPARDY<span>!</span></a>
+    <a href="home.html#como-jugar">Cómo jugar</a>
+  </div></footer>
+  <section class="auth-overlay" role="dialog" aria-labelledby="auth-titulo">
+    <a class="auth-shade" href="#contenido" tabindex="-1" aria-hidden="true"></a>
+    <div class="auth-panel">
+      <h2 class="sr-only" id="auth-titulo">Acceso a tu cuenta</h2>
+      <a class="auth-close" href="#contenido" aria-label="Cerrar ventana">×</a>
+      <nav class="auth-tabs" aria-label="Acceso a tu cuenta">
+        <a id="cuenta-ingresar" href="#cuenta-ingresar">Ingresar</a>
+        <a id="cuenta-registro" href="#cuenta-registro">Registrarse</a>
+      </nav>
+      <div class="auth-fields auth-login" role="group" aria-labelledby="cuenta-ingresar">
+        <div class="auth-field">
+          <label for="login-usuario">Correo electrónico / usuario</label>
+          <input class="form-control" id="login-usuario" type="text" autocomplete="username">
+        </div>
+        <div class="auth-field">
+          <label for="login-clave">Contraseña</label>
+          <input class="form-control" id="login-clave" type="password" autocomplete="current-password">
+        </div>
+        <button class="btn auth-submit" type="button">Ingresar</button>
+        <p class="auth-switch">¿No tienes cuenta? <a href="#cuenta-registro">Regístrate aquí</a></p>
+      </div>
+      <div class="auth-fields auth-register" role="group" aria-labelledby="cuenta-registro">
+        <div class="auth-field">
+          <label for="registro-correo">Correo electrónico</label>
+          <input class="form-control" id="registro-correo" type="email" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="registro-clave">Contraseña</label>
+          <input class="form-control" id="registro-clave" type="password" autocomplete="new-password">
+        </div>
+        <div class="auth-field">
+          <label for="registro-confirmar">Confirmar contraseña</label>
+          <input class="form-control" id="registro-confirmar" type="password" autocomplete="new-password">
+        </div>
+        <button class="btn auth-submit" type="button">Registrarte</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Historial | Jeopardy!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#contenido" class="sr-only sr-only-focusable">Saltar al contenido</a>
+  <header class="site-header"><nav class="container site-nav" aria-label="Navegación principal">
+  <a class="brand" href="home.html">JEOPARDY<span>!</span></a>
+  <div class="nav-links">
+    <a href="tablero.html">Tablero</a><a href="historial.html">Historial</a>
+    <a href="perfil.html">Perfil</a><a href="admin.html">Administración</a>
+  </div>
+  <div class="nav-actions">
+    <a class="btn btn-outline-light" href="#cuenta-ingresar" aria-haspopup="dialog">Ingresar</a>
+    <a class="btn btn-gold" href="#cuenta-registro" aria-haspopup="dialog">Registrarse</a>
+  </div>
+</nav></header>
+  <main id="contenido" class="container screen">
+    <h1>Historial de partidas</h1><p class="muted">Estadísticas de ejemplo</p>
+    <div class="step-grid my-4"><div class="surface">Partidas · 2</div><div class="surface">Victorias · 1</div><div class="surface">Derrotas · 1</div></div>
+    <div class="table-responsive"><table class="table table-dark">
+  <thead><tr><th scope="col">Partida</th><th scope="col">Puntuación</th><th scope="col">Resultado</th><th scope="col">Preguntas respondidas</th><th scope="col">Dificultades</th></tr></thead>
+  <tbody><tr><td>Partida clásica</td><td>100 pts</td><td>Victoria</td><td>2</td><td>Inicial (1), Media (1)</td></tr>
+    <tr><td>Ronda de geografía</td><td>0 pts</td><td>Derrota</td><td>1</td><td>Difícil (1)</td></tr></tbody>
+</table></div>
+  </main>
+  <footer class="site-footer"><div class="container site-nav">
+    <a class="brand" href="home.html">JEOPARDY<span>!</span></a>
+    <a href="home.html#como-jugar">Cómo jugar</a>
+  </div></footer>
+  <section class="auth-overlay" role="dialog" aria-labelledby="auth-titulo">
+    <a class="auth-shade" href="#contenido" tabindex="-1" aria-hidden="true"></a>
+    <div class="auth-panel">
+      <h2 class="sr-only" id="auth-titulo">Acceso a tu cuenta</h2>
+      <a class="auth-close" href="#contenido" aria-label="Cerrar ventana">×</a>
+      <nav class="auth-tabs" aria-label="Acceso a tu cuenta">
+        <a id="cuenta-ingresar" href="#cuenta-ingresar">Ingresar</a>
+        <a id="cuenta-registro" href="#cuenta-registro">Registrarse</a>
+      </nav>
+      <div class="auth-fields auth-login" role="group" aria-labelledby="cuenta-ingresar">
+        <div class="auth-field">
+          <label for="login-usuario">Correo electrónico / usuario</label>
+          <input class="form-control" id="login-usuario" type="text" autocomplete="username">
+        </div>
+        <div class="auth-field">
+          <label for="login-clave">Contraseña</label>
+          <input class="form-control" id="login-clave" type="password" autocomplete="current-password">
+        </div>
+        <button class="btn auth-submit" type="button">Ingresar</button>
+        <p class="auth-switch">¿No tienes cuenta? <a href="#cuenta-registro">Regístrate aquí</a></p>
+      </div>
+      <div class="auth-fields auth-register" role="group" aria-labelledby="cuenta-registro">
+        <div class="auth-field">
+          <label for="registro-correo">Correo electrónico</label>
+          <input class="form-control" id="registro-correo" type="email" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="registro-clave">Contraseña</label>
+          <input class="form-control" id="registro-clave" type="password" autocomplete="new-password">
+        </div>
+        <div class="auth-field">
+          <label for="registro-confirmar">Confirmar contraseña</label>
+          <input class="form-control" id="registro-confirmar" type="password" autocomplete="new-password">
+        </div>
+        <button class="btn auth-submit" type="button">Registrarte</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

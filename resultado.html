@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resultado | Jeopardy!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#contenido" class="sr-only sr-only-focusable">Saltar al contenido</a>
+  <header class="site-header"><nav class="container site-nav" aria-label="Navegación principal">
+  <a class="brand" href="home.html">JEOPARDY<span>!</span></a>
+  <div class="nav-links">
+    <a href="tablero.html">Tablero</a><a href="historial.html">Historial</a>
+    <a href="perfil.html">Perfil</a><a href="admin.html">Administración</a>
+  </div>
+  <div class="nav-actions">
+    <a class="btn btn-outline-light" href="#cuenta-ingresar" aria-haspopup="dialog">Ingresar</a>
+    <a class="btn btn-gold" href="#cuenta-registro" aria-haspopup="dialog">Registrarse</a>
+  </div>
+</nav></header>
+  <main id="contenido" class="container screen">
+    <h1>Resultado de la partida</h1>
+    <p class="muted">Ejemplo · Partida clásica · 1 acierto · 1 error</p>
+    <section class="surface my-3"><h2>Jugador 1</h2><p>100 puntos · Victoria</p></section>
+    <h2>Resumen de respuestas</h2>
+    <div class="table-responsive"><table class="table table-dark">
+  <thead><tr><th scope="col">Pregunta</th><th scope="col">Dificultad</th><th scope="col">Respuesta enviada</th><th scope="col">Resultado</th></tr></thead>
+  <tbody><tr><td>¿En qué país se construyeron las pirámides de Guiza?</td><td>Inicial</td><td>Egipto</td><td>Correcta</td></tr>
+    <tr><td>¿Cuál es la capital de Canadá?</td><td>Media</td><td>Toronto</td><td>Incorrecta · Ottawa</td></tr></tbody>
+</table></div>
+    <div class="actions"><a class="btn btn-gold" href="tablero.html">Regresar al tablero</a> <a class="btn btn-outline-light" href="historial.html">Consultar estadísticas</a></div>
+  </main>
+  <footer class="site-footer"><div class="container site-nav">
+    <a class="brand" href="home.html">JEOPARDY<span>!</span></a>
+    <a href="home.html#como-jugar">Cómo jugar</a>
+  </div></footer>
+  <section class="auth-overlay" role="dialog" aria-labelledby="auth-titulo">
+    <a class="auth-shade" href="#contenido" tabindex="-1" aria-hidden="true"></a>
+    <div class="auth-panel">
+      <h2 class="sr-only" id="auth-titulo">Acceso a tu cuenta</h2>
+      <a class="auth-close" href="#contenido" aria-label="Cerrar ventana">×</a>
+      <nav class="auth-tabs" aria-label="Acceso a tu cuenta">
+        <a id="cuenta-ingresar" href="#cuenta-ingresar">Ingresar</a>
+        <a id="cuenta-registro" href="#cuenta-registro">Registrarse</a>
+      </nav>
+      <div class="auth-fields auth-login" role="group" aria-labelledby="cuenta-ingresar">
+        <div class="auth-field">
+          <label for="login-usuario">Correo electrónico / usuario</label>
+          <input class="form-control" id="login-usuario" type="text" autocomplete="username">
+        </div>
+        <div class="auth-field">
+          <label for="login-clave">Contraseña</label>
+          <input class="form-control" id="login-clave" type="password" autocomplete="current-password">
+        </div>
+        <button class="btn auth-submit" type="button">Ingresar</button>
+        <p class="auth-switch">¿No tienes cuenta? <a href="#cuenta-registro">Regístrate aquí</a></p>
+      </div>
+      <div class="auth-fields auth-register" role="group" aria-labelledby="cuenta-registro">
+        <div class="auth-field">
+          <label for="registro-correo">Correo electrónico</label>
+          <input class="form-control" id="registro-correo" type="email" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="registro-clave">Contraseña</label>
+          <input class="form-control" id="registro-clave" type="password" autocomplete="new-password">
+        </div>
+        <div class="auth-field">
+          <label for="registro-confirmar">Confirmar contraseña</label>
+          <input class="form-control" id="registro-confirmar" type="password" autocomplete="new-password">
+        </div>
+        <button class="btn auth-submit" type="button">Registrarte</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
