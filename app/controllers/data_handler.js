@@ -2,249 +2,152 @@
 
 const fs = require('fs');
 const path = require('path');
-const { generateUUID } = require('./utils');
 
-// Rutas a los 3 archivos de información
+const Category = require('./category');
+const Question = require('./question');
+const Respuesta = require('./respuesta');
+
+// Rutas a los 3 archivos
 const pathCategorias = path.join(__dirname, '../data/categorias.json');
 const pathPreguntas = path.join(__dirname, '../data/preguntas.json');
 const pathRespuestas = path.join(__dirname, '../data/respuestas.json');
 
-// Cargar los datos en memoria
-let categorias = JSON.parse(fs.readFileSync(pathCategorias, 'utf8'));
-let preguntas = JSON.parse(fs.readFileSync(pathPreguntas, 'utf8'));
-let respuestas = JSON.parse(fs.readFileSync(pathRespuestas, 'utf8'));
+// Cargar y convertir a instancias de clase al iniciar
+let categorias = JSON.parse(fs.readFileSync(pathCategorias, 'utf8')).map(Category.createFromObject);
+let preguntas = JSON.parse(fs.readFileSync(pathPreguntas, 'utf8')).map(Question.createFromObject);
+let respuestas = JSON.parse(fs.readFileSync(pathRespuestas, 'utf8')).map(Respuesta.createFromObject);
 
 // Funciones para guardar cambios
 function saveCategorias() {
-    fs.writeFileSync(pathCategorias, JSON.stringify(categorias, null, 2), 'utf8');
+    fs.writeFileSync(pathCategorias, JSON.stringify(categorias.map(c => c.toObject()), null, 2), 'utf8');
 }
 function savePreguntas() {
-    fs.writeFileSync(pathPreguntas, JSON.stringify(preguntas, null, 2), 'utf8');
+    fs.writeFileSync(pathPreguntas, JSON.stringify(preguntas.map(q => q.toObject()), null, 2), 'utf8');
 }
 function saveRespuestas() {
-    fs.writeFileSync(pathRespuestas, JSON.stringify(respuestas, null, 2), 'utf8');
+    fs.writeFileSync(pathRespuestas, JSON.stringify(respuestas.map(r => r.toObject()), null, 2), 'utf8');
 }
 
 // CATEGORÍAS
+function getCategories() { return categorias.map(c => c.toObject()); }
 
-// Obtener todas las categorías
-function getCategories() {
-    return categorias;
-}
-
-// Obtener una categoría por su ID
 function getCategoryById(categoryId) {
-    return categorias.find(cat => cat.id === categoryId);
+    const cat = categorias.find(c => c.id === categoryId);
+    return cat ? cat.toObject() : undefined;
 }
 
-// Crear una nueva categoría
-function addCategory(categoryName) {
-    const newCategoryId = generateUUID();
-    
-    const newCategory = {
-        id: newCategoryId,
-        nombre: categoryName
-    };
-    
+function addCategory(nombre) {
+    const newCategory = new Category(nombre);
     categorias.push(newCategory);
     saveCategorias();
-    
-    return newCategory;
+    return newCategory.toObject();
 }
 
-// Actualizar una categoría
 function updateCategory(categoryId, updatedData) {
-    const index = categorias.findIndex(cat => cat.id === categoryId);
-    if (index === -1) {
-        throw new Error("Categoría no encontrada.");
-    }
-
-    if (updatedData.nombre !== undefined) categorias[index].nombre = updatedData.nombre;
+    const cat = categorias.find(c => c.id === categoryId);
+    if (!cat) throw new Error("Categoría no encontrada.");
     
+    if (updatedData.nombre !== undefined) cat.nombre = updatedData.nombre;
     saveCategorias();
-    
-    return categorias[index];
+    return cat.toObject();
 }
 
-// Eliminar una categoría (y todas sus preguntas y respuestas asociadas)
 function deleteCategory(categoryId) {
-    const index = categorias.findIndex(cat => cat.id === categoryId);
-    if (index === -1) {
-        throw new Error("Categoría no encontrada.");
-    }
-
-    const categoriaEliminada = categorias[index];
-
-    // Eliminar la categoría
+    const index = categorias.findIndex(c => c.id === categoryId);
+    if (index === -1) throw new Error("Categoría no encontrada.");
+    
+    const catEliminada = categorias[index].toObject();
     categorias.splice(index, 1);
     saveCategorias();
 
-    // Eliminar todas las preguntas de esta categoría
     const preguntasAEliminar = preguntas.filter(p => p.categoria === categoryId);
-    preguntasAEliminar.forEach(preg => {
-        const pregIndex = preguntas.findIndex(p => p.id === preg.id);
-        if (pregIndex !== -1) {
-            preguntas.splice(pregIndex, 1);
-        }
-    });
+    preguntasAEliminar.forEach(p => deleteQuestion(p.id, false));
+    
     savePreguntas();
-
-    // Eliminar todas las respuestas de esas preguntas
-    preguntasAEliminar.forEach(preg => {
-        const respuestasAEliminar = respuestas.filter(r => r.preguntaId === preg.id);
-        respuestasAEliminar.forEach(resp => {
-            const respIndex = respuestas.findIndex(r => r.id === resp.id);
-            if (respIndex !== -1) {
-                respuestas.splice(respIndex, 1);
-            }
-        });
-    });
     saveRespuestas();
-
-    return categoriaEliminada;
+    return catEliminada;
 }
 
-// PREGUNTAS
-
-// Obtener el tablero completo
+// PREGUNTAS Y TABLERO
 function getBoard() {
     return categorias.map(cat => {
-        const preguntasDeEstaCategoria = preguntas.filter(p => p.categoria === cat.id);
-        
-        const preguntasCompletas = preguntasDeEstaCategoria.map(p => {
-            const respuestaCorrecta = respuestas.find(r => r.preguntaId === p.id && r.correcta === true);
-            
+        const preguntasDeCat = preguntas.filter(p => p.categoria === cat.id);
+        const preguntasCompletas = preguntasDeCat.map(p => {
+            const respCorrecta = respuestas.find(r => r.preguntaId === p.id && r.correcta === true);
             return {
-                id: p.id,
-                categoria: p.categoria,
-                texto: p.texto,
-                dificultad: p.dificultad,
-                puntos: p.puntos,
-                respuesta: respuestaCorrecta ? respuestaCorrecta.texto : "Sin respuesta correcta"
+                ...p.toObject(),
+                respuesta: respCorrecta ? respCorrecta.texto : "Sin respuesta correcta"
             };
         });
-
-        return {
-            id: cat.id,
-            nombre: cat.nombre,
-            questions: preguntasCompletas
-        };
+        return { ...cat.toObject(), questions: preguntasCompletas };
     });
 }
 
-// Obtener una pregunta específica por su ID
 function getQuestionById(questionId) {
-    const pregunta = preguntas.find(p => p.id === questionId);
-    if (!pregunta) return undefined;
-
-    const respuestaCorrecta = respuestas.find(r => r.preguntaId === questionId && r.correcta === true);
+    const p = preguntas.find(q => q.id === questionId);
+    if (!p) return undefined;
     
+    const respCorrecta = respuestas.find(r => r.preguntaId === questionId && r.correcta === true);
     return {
-        id: pregunta.id,
-        categoria: pregunta.categoria,
-        texto: pregunta.texto,
-        dificultad: pregunta.dificultad,
-        puntos: pregunta.puntos,
-        respuesta: respuestaCorrecta ? respuestaCorrecta.texto : "Sin respuesta correcta"
+        ...p.toObject(),
+        respuesta: respCorrecta ? respCorrecta.texto : "Sin respuesta correcta"
     };
 }
 
-// Agregar una nueva pregunta con su respuesta
 function addQuestion(categoryId, questionData, answerText) {
-    const categoria = getCategoryById(categoryId);
-    if (!categoria) {
-        throw new Error("Categoría no encontrada.");
-    }
-
-    // UUID único para la pregunta
-    const newPreguntaId = generateUUID();
+    if (!categorias.find(c => c.id === categoryId)) throw new Error("Categoría no encontrada.");
     
-    const newPregunta = {
-        id: newPreguntaId,
-        categoria: categoryId,
-        texto: questionData.texto,
-        dificultad: questionData.dificultad,
-        puntos: questionData.puntos
-    };
-    
-    preguntas.push(newPregunta);
+    // La clase Question valida texto, dificultad, puntos, etc.
+    const newQuestion = new Question(questionData.texto, categoryId, questionData.dificultad, questionData.puntos);
+    preguntas.push(newQuestion);
     savePreguntas();
 
-    // UUID único para la respuesta
-    const newRespuestaId = generateUUID();
-    
-    const newRespuesta = {
-        id: newRespuestaId,
-        preguntaId: newPreguntaId,
-        texto: answerText,
-        correcta: true
-    };
-    
+    // La clase Respuesta valida que correcta sea true o false y el UUID sea válido
+    const newRespuesta = new Respuesta(newQuestion.id, answerText, true);
     respuestas.push(newRespuesta);
     saveRespuestas();
 
-    return newPregunta;
+    return newQuestion.toObject();
 }
 
-// Actualizar una pregunta
 function updateQuestion(questionId, updatedData) {
-    const index = preguntas.findIndex(p => p.id === questionId);
-    if (index === -1) {
-        throw new Error("Pregunta no encontrada.");
-    }
+    const q = preguntas.find(p => p.id === questionId);
+    if (!q) throw new Error("Pregunta no encontrada.");
 
-    if (updatedData.texto !== undefined) preguntas[index].texto = updatedData.texto;
-    if (updatedData.dificultad !== undefined) preguntas[index].dificultad = updatedData.dificultad;
-    if (updatedData.puntos !== undefined) preguntas[index].puntos = updatedData.puntos;
-    if (updatedData.categoria !== undefined) preguntas[index].categoria = updatedData.categoria;
+    if (updatedData.texto !== undefined) q.texto = updatedData.texto;
+    if (updatedData.dificultad !== undefined) q.dificultad = updatedData.dificultad;
+    if (updatedData.puntos !== undefined) q.puntos = updatedData.puntos;
+    if (updatedData.categoria !== undefined) q.categoria = updatedData.categoria;
+    if (updatedData.isRevealed !== undefined) q.isRevealed = updatedData.isRevealed;
     
     savePreguntas();
-    
-    return preguntas[index];
+    return q.toObject();
 }
 
-// Eliminar una pregunta (y todas sus respuestas asociadas)
-function deleteQuestion(questionId) {
+function deleteQuestion(questionId, saveNow = true) {
     const index = preguntas.findIndex(p => p.id === questionId);
-    if (index === -1) {
-        throw new Error("Pregunta no encontrada.");
-    }
+    if (index === -1) throw new Error("Pregunta no encontrada.");
 
-    const preguntaEliminada = preguntas[index];
-
+    const pregEliminada = preguntas[index].toObject();
     preguntas.splice(index, 1);
-    savePreguntas();
+    if (saveNow) savePreguntas();
 
-    const respuestasAEliminar = respuestas.filter(r => r.preguntaId === questionId);
-    respuestasAEliminar.forEach(resp => {
-        const respIndex = respuestas.findIndex(r => r.id === resp.id);
-        if (respIndex !== -1) {
-            respuestas.splice(respIndex, 1);
-        }
+    // Eliminar respuestas asociadas
+    const respAEliminar = respuestas.filter(r => r.preguntaId === questionId);
+    respAEliminar.forEach(r => {
+        const rIndex = respuestas.findIndex(resp => resp.id === r.id);
+        if (rIndex !== -1) respuestas.splice(rIndex, 1);
     });
-    saveRespuestas();
+    if (saveNow) saveRespuestas();
 
-    return preguntaEliminada;
+    return pregEliminada;
 }
 
-// Marcar una pregunta como respondida
 function markQuestionAsRevealed(questionId) {
-    return getQuestionById(questionId);
+    return updateQuestion(questionId, { isRevealed: true });
 }
 
 module.exports = {
-    // Categorías
-    getCategories,
-    getCategoryById,
-    addCategory,
-    updateCategory,
-    deleteCategory,
-    
-    // Preguntas y tablero
-    getBoard,
-    getQuestionById,
-    addQuestion,
-    updateQuestion,
-    deleteQuestion,
-    markQuestionAsRevealed
+    getCategories, getCategoryById, addCategory, updateCategory, deleteCategory,
+    getBoard, getQuestionById, addQuestion, updateQuestion, deleteQuestion, markQuestionAsRevealed
 };

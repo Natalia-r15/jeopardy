@@ -3,27 +3,28 @@
 const express = require('express');
 const router = express.Router();
 
-// Aquí irán los GET/POST de preguntas y puntajes
+// Importar los routers específicos
 const gameRouter = require('../routes/juego');
-
-// Los admins pueden crear o modificar las preguntas
 const adminGameRouter = require('./../routes/admin_juego');
-
-// Todo lo que empiece con /game se va a juego.js
-router.use('/game', gameRouter);
-
-// Todo lo que empiece con /admin/game pasa primero por validateAdmin
-router.use('/admin/game', validateAdmin, adminGameRouter);
 
 // Middleware de seguridad
 function validateAdmin(req, res, next) {
+    // Busca el header 'x-auth' en la petición
     let authHeader = req.headers['x-auth'];
 
+    // Si no es exactamente 'admin', bloquea el acceso
     if (authHeader !== 'admin') {
         return res.status(403).send('Acceso denegado: se requieren privilegios de administrador.');
     }
 
-    next(); // Si es admin, lo deja pasar a adminGameRouter
+    // Si es correcto, permite continuar a la siguiente función
+    next(); 
 }
+
+// Todo lo que empiece con /game se va a juego.js
+router.use('/game', gameRouter);
+
+// Todo lo que empiece con /admin/game pasa primero por validateAdmin, y si aprueba, va a admin_juego.js
+router.use('/admin/game', validateAdmin, adminGameRouter);
 
 module.exports = router;

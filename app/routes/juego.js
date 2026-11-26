@@ -7,13 +7,12 @@ const dataHandler = require('./../controllers/data_handler');
 // Obtener el tablero completo (todas las categorías y las preguntas)
 router.route('/')
     .get((req, res) => {
-
         let query = req.query.filter;
         let board;
 
         if (query === undefined) {
             try {
-                board = dataHandler.getBoard(); // o dataHandler.getCategories()
+                board = dataHandler.getBoard();
             } catch (e) {
                 return res.status(400).send('No se pudo obtener el tablero de Jeopardy.');
             }
@@ -25,7 +24,7 @@ router.route('/')
 
                 // Filtrar categorías cuyo nombre coincida con la búsqueda
                 let filteredBoard = board.filter(category => {
-                    let categoryName = category.name ? category.name.toLowerCase() : "";
+                    let categoryName = category.nombre ? category.nombre.toLowerCase() : "";
                     return categoryName.includes(search);
                 });
 
@@ -37,7 +36,7 @@ router.route('/')
         }
     });
 
-// Obtener múltiples preguntas por sus IDs
+// Obtener varias preguntas por sus IDs
 router.route('/questions')
     .post((req, res) => {
         let queIds = req.body.queIds;
@@ -50,9 +49,8 @@ router.route('/questions')
         for (let id of queIds) {
             let question = dataHandler.getQuestionById(id);
             if (question != undefined) {
-                questions.push(clue);
+                questions.push(question);
             } else {
-                // Mensaje de error, no se encontró el id de la pregunta
                 return res.status(404).send(`Pregunta con id '${id}' no encontrada.`);
             }
         }
@@ -64,7 +62,6 @@ router.route('/questions')
 router.route('/:id')
     .get((req, res) => {
         let id = req.params.id;
-        
         let category = dataHandler.getCategoryById(id);
 
         if (category != undefined) {
@@ -80,11 +77,12 @@ router.route('/question/:id/reveal')
         let queId = req.params.id;
         
         try {
-            let updatedQuestion = dataHandler.markClueAsRevealed(queId);
+            let updatedQuestion = dataHandler.markQuestionAsRevealed(queId);
+            
             if (updatedQuestion) {
                 res.status(200).json(updatedQuestion);
             } else {
-                res.status(404).send(`Pregunta con id '${clueId}' no encontrada.`);
+                res.status(404).send(`Pregunta con id '${queId}' no encontrada.`);
             }
         } catch (e) {
             console.log("ERROR:", e);
