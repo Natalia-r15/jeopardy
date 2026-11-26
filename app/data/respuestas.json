@@ -1,632 +1,638 @@
 [
   {
-    "id": 1,
-    "preguntaId": 1,
+    "id": "8e77c09e-81b0-4d90-84d2-57d18c124a9c",
+    "preguntaId": "f4d98349-5327-4232-a468-7a676ee41ebd",
     "texto": "Egipto",
     "correcta": true
   },
   {
-    "id": 2,
-    "preguntaId": 1,
+    "id": "e1ae8829-23cc-4dca-bf82-db9521089ee5",
+    "preguntaId": "f4d98349-5327-4232-a468-7a676ee41ebd",
     "texto": "Grecia",
     "correcta": false
   },
   {
-    "id": 3,
-    "preguntaId": 1,
+    "id": "48421af9-7a93-475c-8b83-81dc6766e0d4",
+    "preguntaId": "f4d98349-5327-4232-a468-7a676ee41ebd",
     "texto": "Italia",
     "correcta": false
   },
   {
-    "id": 4,
-    "preguntaId": 2,
+    "id": "669583d5-fe11-4059-b5c6-c128fd4fb398",
+    "preguntaId": "ab2717f5-ec76-40ab-ba28-acdfd56be348",
     "texto": "1821",
     "correcta": false
   },
   {
-    "id": 5,
-    "preguntaId": 2,
+    "id": "25a33137-b53f-4331-bfdd-442fd031ccb3",
+    "preguntaId": "ab2717f5-ec76-40ab-ba28-acdfd56be348",
     "texto": "1910",
     "correcta": false
   },
   {
-    "id": 6,
-    "preguntaId": 2,
+    "id": "8552786a-affe-4b2a-850a-d8487500cfe8",
+    "preguntaId": "ab2717f5-ec76-40ab-ba28-acdfd56be348",
     "texto": "1810",
     "correcta": true
   },
   {
-    "id": 7,
-    "preguntaId": 3,
+    "id": "bc0b85a9-6c8c-4c76-a92e-a28b6169388c",
+    "preguntaId": "cc013891-3828-43be-ad05-21d3cda8b75a",
     "texto": "1979",
     "correcta": false
   },
   {
-    "id": 8,
-    "preguntaId": 3,
+    "id": "f18e8a70-18a5-4ef9-8eab-755609241784",
+    "preguntaId": "cc013891-3828-43be-ad05-21d3cda8b75a",
     "texto": "1989",
     "correcta": true
   },
   {
-    "id": 9,
-    "preguntaId": 3,
+    "id": "dc520ec8-30e3-4459-a44e-66d1b775829b",
+    "preguntaId": "cc013891-3828-43be-ad05-21d3cda8b75a",
     "texto": "1999",
     "correcta": false
   },
   {
-    "id": 10,
-    "preguntaId": 4,
+    "id": "f1d66199-30c2-464d-adcb-b63c9d6ad721",
+    "preguntaId": "3b06b005-01e5-45dd-9822-254d91660241",
     "texto": "Inca",
     "correcta": true
   },
   {
-    "id": 11,
-    "preguntaId": 4,
+    "id": "63057ea7-1035-4d8b-9d70-8f9a2168e440",
+    "preguntaId": "3b06b005-01e5-45dd-9822-254d91660241",
     "texto": "Maya",
     "correcta": false
   },
   {
-    "id": 12,
-    "preguntaId": 4,
+    "id": "189c515b-8335-4e01-9715-471561d0d7cb",
+    "preguntaId": "3b06b005-01e5-45dd-9822-254d91660241",
     "texto": "Olmeca",
     "correcta": false
   },
   {
-    "id": 13,
-    "preguntaId": 5,
+    "id": "e6a85fc8-b26c-45c7-8c40-e26f2dcd3c7d",
+    "preguntaId": "aa27cc69-0c52-4bab-93a0-a706b43d8e94",
     "texto": "1415",
     "correcta": false
   },
   {
-    "id": 14,
-    "preguntaId": 5,
+    "id": "47e9c9d8-9363-4319-b709-ef466c0976de",
+    "preguntaId": "aa27cc69-0c52-4bab-93a0-a706b43d8e94",
     "texto": "1512",
     "correcta": false
   },
   {
-    "id": 15,
-    "preguntaId": 5,
+    "id": "162bef9e-cd27-40ae-a57e-e5f09ec2ee0d",
+    "preguntaId": "aa27cc69-0c52-4bab-93a0-a706b43d8e94",
     "texto": "1215",
     "correcta": true
   },
   {
-    "id": 16,
-    "preguntaId": 6,
+    "id": "ddbe750e-5645-4dde-a303-65cd64bb740e",
+    "preguntaId": "2008445f-4edf-482d-9b16-ac3006aee27b",
     "texto": "H",
     "correcta": false
   },
   {
-    "id": 17,
-    "preguntaId": 6,
+    "id": "19ef1592-37fa-405b-9ec4-4a06faa1aeee",
+    "preguntaId": "2008445f-4edf-482d-9b16-ac3006aee27b",
     "texto": "N",
     "correcta": false
   },
   {
-    "id": 18,
-    "preguntaId": 6,
+    "id": "632e2eae-1f8d-43cb-b5dc-13f0b779abc0",
+    "preguntaId": "2008445f-4edf-482d-9b16-ac3006aee27b",
     "texto": "O",
     "correcta": true
   },
   {
-    "id": 19,
-    "preguntaId": 7,
+    "id": "aa23f6ef-ab31-40d8-b1d0-f4d6b2c0f094",
+    "preguntaId": "d3ee4174-70bd-46ef-8370-6d7863c24924",
     "texto": "Saturno",
     "correcta": false
   },
   {
-    "id": 20,
-    "preguntaId": 7,
+    "id": "e4651a7b-98e3-4cb3-beb7-47830bc6a80e",
+    "preguntaId": "d3ee4174-70bd-46ef-8370-6d7863c24924",
     "texto": "Júpiter",
     "correcta": true
   },
   {
-    "id": 21,
-    "preguntaId": 7,
+    "id": "96aace43-29c5-4b55-8a8c-b89a35b798fc",
+    "preguntaId": "d3ee4174-70bd-46ef-8370-6d7863c24924",
     "texto": "Neptuno",
     "correcta": false
   },
   {
-    "id": 22,
-    "preguntaId": 8,
+    "id": "db824dd9-de93-4787-8b7f-b756815a7a18",
+    "preguntaId": "7aa8ad82-7eb2-4e28-a056-ba08894ee9e6",
     "texto": "Páncreas",
     "correcta": true
   },
   {
-    "id": 23,
-    "preguntaId": 8,
+    "id": "cbafd8ce-53e3-4ec5-8615-8a4d32ce5e4d",
+    "preguntaId": "7aa8ad82-7eb2-4e28-a056-ba08894ee9e6",
     "texto": "Hígado",
     "correcta": false
   },
   {
-    "id": 24,
-    "preguntaId": 8,
+    "id": "9283c890-0f0d-4742-b7e9-409bfb0518e4",
+    "preguntaId": "7aa8ad82-7eb2-4e28-a056-ba08894ee9e6",
     "texto": "Riñón",
     "correcta": false
   },
   {
-    "id": 25,
-    "preguntaId": 9,
+    "id": "6d805970-0ea0-4742-884c-e2f6bbe365eb",
+    "preguntaId": "01438e8d-555a-4f20-84fc-dc3ea49b5383",
     "texto": "Vatio",
     "correcta": false
   },
   {
-    "id": 26,
-    "preguntaId": 9,
+    "id": "d5870645-8da5-4ac1-968b-95debcc3a6be",
+    "preguntaId": "01438e8d-555a-4f20-84fc-dc3ea49b5383",
     "texto": "Amperio",
     "correcta": false
   },
   {
-    "id": 27,
-    "preguntaId": 9,
+    "id": "8fea44f1-5b3d-482a-8055-88f48eca5127",
+    "preguntaId": "01438e8d-555a-4f20-84fc-dc3ea49b5383",
     "texto": "Ohmio",
     "correcta": true
   },
   {
-    "id": 28,
-    "preguntaId": 10,
+    "id": "5a3ceaa9-f78d-45fc-bc02-94387f716ea7",
+    "preguntaId": "d006da76-28f3-4c87-a947-e21d16b626df",
     "texto": "Protón",
     "correcta": false
   },
   {
-    "id": 29,
-    "preguntaId": 10,
+    "id": "a9fc1a8d-df29-4b13-b985-3a2469899da8",
+    "preguntaId": "d006da76-28f3-4c87-a947-e21d16b626df",
     "texto": "Electrón",
     "correcta": true
   },
   {
-    "id": 30,
-    "preguntaId": 10,
+    "id": "c0903511-32c7-4dba-81ff-f9bf3fdd9d12",
+    "preguntaId": "d006da76-28f3-4c87-a947-e21d16b626df",
     "texto": "Neutrón",
     "correcta": false
   },
   {
-    "id": 31,
-    "preguntaId": 11,
+    "id": "d0864185-8dfd-4039-bc20-3e4f0f77d9e1",
+    "preguntaId": "5449e380-509f-41d7-9d10-a101fffb8a85",
     "texto": "Guadalajara",
     "correcta": false
   },
   {
-    "id": 32,
-    "preguntaId": 11,
+    "id": "c825ed68-488c-4c73-a1b4-2c9dd113c4ea",
+    "preguntaId": "5449e380-509f-41d7-9d10-a101fffb8a85",
     "texto": "Ciudad de México",
     "correcta": true
   },
   {
-    "id": 33,
-    "preguntaId": 11,
+    "id": "745611d4-ae8c-4853-b04e-83c5a172bfd8",
+    "preguntaId": "5449e380-509f-41d7-9d10-a101fffb8a85",
     "texto": "Monterrey",
     "correcta": false
   },
   {
-    "id": 34,
-    "preguntaId": 12,
+    "id": "ea9d2da0-92fc-4daa-ab4f-38136c7c27fb",
+    "preguntaId": "6d88e737-20e4-4fcc-95b7-d12c93a5262c",
     "texto": "África",
     "correcta": true
   },
   {
-    "id": 35,
-    "preguntaId": 12,
+    "id": "2ea84d00-a381-4c6b-83ea-e48128523f20",
+    "preguntaId": "6d88e737-20e4-4fcc-95b7-d12c93a5262c",
     "texto": "Asia",
     "correcta": false
   },
   {
-    "id": 36,
-    "preguntaId": 12,
+    "id": "17b10653-d06c-42b5-bfdf-aafcd9d203ac",
+    "preguntaId": "6d88e737-20e4-4fcc-95b7-d12c93a5262c",
     "texto": "Europa",
     "correcta": false
   },
   {
-    "id": 37,
-    "preguntaId": 13,
+    "id": "373d1e71-9fd1-4dd3-9521-b4b555c6fa53",
+    "preguntaId": "424c8b89-d2a9-4ca5-a99c-8d54356c4e53",
     "texto": "Toronto",
     "correcta": false
   },
   {
-    "id": 38,
-    "preguntaId": 13,
+    "id": "c0367cb4-c48b-4145-82d2-448be5cd5528",
+    "preguntaId": "424c8b89-d2a9-4ca5-a99c-8d54356c4e53",
     "texto": "Montreal",
     "correcta": false
   },
   {
-    "id": 39,
-    "preguntaId": 13,
+    "id": "64b1ef52-112f-433b-adcc-a9709fa46f72",
+    "preguntaId": "424c8b89-d2a9-4ca5-a99c-8d54356c4e53",
     "texto": "Ottawa",
     "correcta": true
   },
   {
-    "id": 40,
-    "preguntaId": 14,
+    "id": "1a43e0de-7fed-4a25-a978-a53d13ebf1e4",
+    "preguntaId": "4f7b8b0d-2383-4691-887b-477e2a4b0eee",
     "texto": "Nepal",
     "correcta": false
   },
   {
-    "id": 41,
-    "preguntaId": 14,
+    "id": "5538b530-07fa-40e2-93b0-31a434b4e845",
+    "preguntaId": "4f7b8b0d-2383-4691-887b-477e2a4b0eee",
     "texto": "Mongolia",
     "correcta": true
   },
   {
-    "id": 42,
-    "preguntaId": 14,
+    "id": "49fd6717-65e0-4944-9887-429627c99b5d",
+    "preguntaId": "4f7b8b0d-2383-4691-887b-477e2a4b0eee",
     "texto": "Bután",
     "correcta": false
   },
   {
-    "id": 43,
-    "preguntaId": 15,
+    "id": "3d2897dd-1118-4a7a-9566-b59a3b89aef1",
+    "preguntaId": "bc091d8d-9a4d-4629-8a3e-a3ae2818d3ef",
     "texto": "Gibraltar",
     "correcta": true
   },
   {
-    "id": 44,
-    "preguntaId": 15,
+    "id": "2f750fb2-b0a7-4076-9f26-65aaccad14c0",
+    "preguntaId": "bc091d8d-9a4d-4629-8a3e-a3ae2818d3ef",
     "texto": "Bering",
     "correcta": false
   },
   {
-    "id": 45,
-    "preguntaId": 15,
+    "id": "9dae285d-3bd8-4353-90d3-57e57656b851",
+    "preguntaId": "bc091d8d-9a4d-4629-8a3e-a3ae2818d3ef",
     "texto": "Ormuz",
     "correcta": false
   },
   {
-    "id": 46,
-    "preguntaId": 16,
+    "id": "f020f6e0-75b0-4278-845d-8685d72ac374",
+    "preguntaId": "ab19424f-1440-4d64-8f3e-d04bf7a807da",
     "texto": "Woody",
     "correcta": true
   },
   {
-    "id": 47,
-    "preguntaId": 16,
+    "id": "20e2b229-949f-49f1-b6c1-10e84c81c6c6",
+    "preguntaId": "ab19424f-1440-4d64-8f3e-d04bf7a807da",
     "texto": "Buzz",
     "correcta": false
   },
   {
-    "id": 48,
-    "preguntaId": 16,
+    "id": "fd78a8c2-2b55-4d55-a98e-6566af3968c4",
+    "preguntaId": "ab19424f-1440-4d64-8f3e-d04bf7a807da",
     "texto": "Rex",
     "correcta": false
   },
   {
-    "id": 49,
-    "preguntaId": 17,
+    "id": "1e430668-ed39-4237-a13e-01f4a4d58d63",
+    "preguntaId": "1ee6990e-6c89-439d-ae41-1289eaad5113",
     "texto": "Star Trek",
     "correcta": false
   },
   {
-    "id": 50,
-    "preguntaId": 17,
+    "id": "2167d4d4-37a6-4133-bf2b-d1401e57cb21",
+    "preguntaId": "1ee6990e-6c89-439d-ae41-1289eaad5113",
     "texto": "Dune",
     "correcta": false
   },
   {
-    "id": 51,
-    "preguntaId": 17,
+    "id": "4eaf875e-8f23-412f-af57-3c1e1c510295",
+    "preguntaId": "1ee6990e-6c89-439d-ae41-1289eaad5113",
     "texto": "Star Wars",
     "correcta": true
   },
   {
-    "id": 52,
-    "preguntaId": 18,
+    "id": "28b99ebe-71d1-4270-8007-a1829d911e6c",
+    "preguntaId": "9ca9fcdd-a32a-462b-bb8f-4ef49a76a4c3",
     "texto": "ABBA",
     "correcta": false
   },
   {
-    "id": 53,
-    "preguntaId": 18,
+    "id": "a7c68268-d7c5-4f0c-b282-7913c1728632",
+    "preguntaId": "9ca9fcdd-a32a-462b-bb8f-4ef49a76a4c3",
     "texto": "Queen",
     "correcta": true
   },
   {
-    "id": 54,
-    "preguntaId": 18,
+    "id": "e0a278b4-7220-4a76-9985-5519d01a2beb",
+    "preguntaId": "9ca9fcdd-a32a-462b-bb8f-4ef49a76a4c3",
     "texto": "The Beatles",
     "correcta": false
   },
   {
-    "id": 55,
-    "preguntaId": 19,
+    "id": "60dc47e0-9527-4a11-9332-d8fdad451cfc",
+    "preguntaId": "e3800412-bd79-462c-8540-27a4f575b118",
     "texto": "Guillermo del Toro",
     "correcta": true
   },
   {
-    "id": 56,
-    "preguntaId": 19,
+    "id": "eb38f54b-4684-40b5-b525-9e45b84a3b8e",
+    "preguntaId": "e3800412-bd79-462c-8540-27a4f575b118",
     "texto": "Alfonso Cuarón",
     "correcta": false
   },
   {
-    "id": 57,
-    "preguntaId": 19,
+    "id": "7136efd2-4e05-4f07-9a6e-a35e61ed6586",
+    "preguntaId": "e3800412-bd79-462c-8540-27a4f575b118",
     "texto": "Alejandro González Iñárritu",
     "correcta": false
   },
   {
-    "id": 58,
-    "preguntaId": 20,
+    "id": "e7bcfddd-bac7-4a49-b80a-1f79d39221ca",
+    "preguntaId": "6cdd5a7d-ecbb-4d12-a403-06dfbe261a54",
     "texto": "Discovery",
     "correcta": false
   },
   {
-    "id": 59,
-    "preguntaId": 20,
+    "id": "ff2349a8-841f-4cdf-a87d-7008f923c0b8",
+    "preguntaId": "6cdd5a7d-ecbb-4d12-a403-06dfbe261a54",
     "texto": "Homework",
     "correcta": false
   },
   {
-    "id": 60,
-    "preguntaId": 20,
+    "id": "703c3206-1d03-4beb-afd1-880dcc6aab92",
+    "preguntaId": "6cdd5a7d-ecbb-4d12-a403-06dfbe261a54",
     "texto": "Random Access Memories",
     "correcta": true
   },
   {
-    "id": 61,
-    "preguntaId": 21,
+    "id": "4dcc3f7f-131b-4c25-852f-bb2f16c35d14",
+    "preguntaId": "eed61125-00a8-4216-8521-7cf8ea958d4e",
     "texto": "Lope de Vega",
     "correcta": false
   },
   {
-    "id": 62,
-    "preguntaId": 21,
+    "id": "78904e1c-c3b5-49f9-a0b9-848a72efcb7b",
+    "preguntaId": "eed61125-00a8-4216-8521-7cf8ea958d4e",
     "texto": "Francisco de Quevedo",
     "correcta": false
   },
   {
-    "id": 63,
-    "preguntaId": 21,
+    "id": "1d9630b4-fb44-454e-9546-bd1e000681bb",
+    "preguntaId": "eed61125-00a8-4216-8521-7cf8ea958d4e",
     "texto": "Miguel de Cervantes",
     "correcta": true
   },
   {
-    "id": 64,
-    "preguntaId": 22,
+    "id": "f93ef68c-f34a-436b-9dad-fa001bfe4ef5",
+    "preguntaId": "d830dc5b-893d-4601-9722-82da8ca4fc1d",
     "texto": "Ríos y Torres",
     "correcta": false
   },
   {
-    "id": 65,
-    "preguntaId": 22,
+    "id": "bb52ba3d-6349-48e8-bdfd-97a7bf3ef013",
+    "preguntaId": "d830dc5b-893d-4601-9722-82da8ca4fc1d",
     "texto": "Montesco y Capuleto",
     "correcta": true
   },
   {
-    "id": 66,
-    "preguntaId": 22,
+    "id": "4d8742e3-996b-48f4-9927-c775c6d84048",
+    "preguntaId": "d830dc5b-893d-4601-9722-82da8ca4fc1d",
     "texto": "Bennet y Darcy",
     "correcta": false
   },
   {
-    "id": 67,
-    "preguntaId": 23,
+    "id": "fca52b8c-27c8-4eb2-9152-6d91b721b90d",
+    "preguntaId": "534f72e2-0783-48f8-933c-69cf3b4e6dea",
     "texto": "Gabriel García Márquez",
     "correcta": true
   },
   {
-    "id": 68,
-    "preguntaId": 23,
+    "id": "977d67d7-0404-4754-8955-179013be0e28",
+    "preguntaId": "534f72e2-0783-48f8-933c-69cf3b4e6dea",
     "texto": "Juan Rulfo",
     "correcta": false
   },
   {
-    "id": 69,
-    "preguntaId": 23,
+    "id": "385ea356-e208-4fd2-85df-45e0053ebe23",
+    "preguntaId": "534f72e2-0783-48f8-933c-69cf3b4e6dea",
     "texto": "Julio Cortázar",
     "correcta": false
   },
   {
-    "id": 70,
-    "preguntaId": 24,
+    "id": "2a41f92b-76a8-46f6-9242-38c716f88d98",
+    "preguntaId": "0084a552-9f78-4cac-973f-4b039206624d",
     "texto": "Macondo",
     "correcta": false
   },
   {
-    "id": 71,
-    "preguntaId": 24,
+    "id": "66beba42-1d60-49c2-9fcf-53c7bf95cae8",
+    "preguntaId": "0084a552-9f78-4cac-973f-4b039206624d",
     "texto": "Santa María",
     "correcta": false
   },
   {
-    "id": 72,
-    "preguntaId": 24,
+    "id": "eabc593b-7953-40e3-8be9-6b85e0a41090",
+    "preguntaId": "0084a552-9f78-4cac-973f-4b039206624d",
     "texto": "Comala",
     "correcta": true
   },
   {
-    "id": 73,
-    "preguntaId": 25,
+    "id": "6619abf6-0b1b-4598-a384-3642dfc3cf79",
+    "preguntaId": "85afcd6c-2ce5-4950-846f-4a86ac49e605",
     "texto": "Octavio Paz",
     "correcta": false
   },
   {
-    "id": 74,
-    "preguntaId": 25,
+    "id": "7a581307-03bd-40b5-b056-c419133e6850",
+    "preguntaId": "85afcd6c-2ce5-4950-846f-4a86ac49e605",
     "texto": "Jorge Luis Borges",
     "correcta": true
   },
   {
-    "id": 75,
-    "preguntaId": 25,
+    "id": "b5cbe724-83cc-4243-8641-9d39621c48b0",
+    "preguntaId": "85afcd6c-2ce5-4950-846f-4a86ac49e605",
     "texto": "Isabel Allende",
     "correcta": false
   },
   {
-    "id": 76,
-    "preguntaId": 26,
+    "id": "70d51157-aba3-4ea7-b518-38b0b1f99461",
+    "preguntaId": "6a99d361-1d45-4778-b6c9-a129253db8ea",
     "texto": "9",
     "correcta": false
   },
   {
-    "id": 77,
-    "preguntaId": 26,
+    "id": "f034065b-3df1-4b45-b6d9-19babb217455",
+    "preguntaId": "6a99d361-1d45-4778-b6c9-a129253db8ea",
     "texto": "11",
     "correcta": true
   },
   {
-    "id": 78,
-    "preguntaId": 26,
+    "id": "60ec3d7c-8a8c-4ee8-a515-d8b08c3df3d0",
+    "preguntaId": "6a99d361-1d45-4778-b6c9-a129253db8ea",
     "texto": "12",
     "correcta": false
   },
   {
-    "id": 79,
-    "preguntaId": 27,
+    "id": "0f2d77d4-a020-496c-b334-194a8cc9d6c7",
+    "preguntaId": "964775bf-c78f-4628-8261-25cced87d5ce",
     "texto": "Baloncesto",
     "correcta": true
   },
   {
-    "id": 80,
-    "preguntaId": 27,
+    "id": "a04516cf-2e1b-450b-a970-a47259dd58e6",
+    "preguntaId": "964775bf-c78f-4628-8261-25cced87d5ce",
     "texto": "Béisbol",
     "correcta": false
   },
   {
-    "id": 81,
-    "preguntaId": 27,
+    "id": "a7fe34c3-c8d7-4561-b57e-4c5e73a9696e",
+    "preguntaId": "964775bf-c78f-4628-8261-25cced87d5ce",
     "texto": "Hockey",
     "correcta": false
   },
   {
-    "id": 82,
-    "preguntaId": 28,
+    "id": "36b65fe6-fe25-4c8d-b9ac-80565dadad60",
+    "preguntaId": "d3ad5b28-bfa1-4af4-9862-9af143dceed7",
     "texto": "Arcilla",
     "correcta": false
   },
   {
-    "id": 83,
-    "preguntaId": 28,
+    "id": "e9af01e2-c56d-4a4e-91b5-2505f76794cb",
+    "preguntaId": "d3ad5b28-bfa1-4af4-9862-9af143dceed7",
     "texto": "Pista dura",
     "correcta": false
   },
   {
-    "id": 84,
-    "preguntaId": 28,
+    "id": "575f4dc1-31d2-4665-99b6-dd5c834aa183",
+    "preguntaId": "d3ad5b28-bfa1-4af4-9862-9af143dceed7",
     "texto": "Césped",
     "correcta": true
   },
   {
-    "id": 85,
-    "preguntaId": 29,
+    "id": "984c9ed8-9b78-4dbb-9379-13088053857e",
+    "preguntaId": "34181498-0e0f-4d72-a3eb-a7aa23334331",
     "texto": "7",
     "correcta": false
   },
   {
-    "id": 86,
-    "preguntaId": 29,
+    "id": "b9da3a8b-6bf3-45d2-88a1-1aad6a42d219",
+    "preguntaId": "34181498-0e0f-4d72-a3eb-a7aa23334331",
     "texto": "10",
     "correcta": true
   },
   {
-    "id": 87,
-    "preguntaId": 29,
+    "id": "72b9a960-9d1c-4994-92e8-0e2af6b69277",
+    "preguntaId": "34181498-0e0f-4d72-a3eb-a7aa23334331",
     "texto": "12",
     "correcta": false
   },
   {
-    "id": 88,
-    "preguntaId": 30,
+    "id": "7e1f6a56-959b-4acf-8829-717dadb17e9d",
+    "preguntaId": "cae1951c-0e54-48fa-99b5-e091e413cefc",
     "texto": "Uruguay",
     "correcta": true
   },
   {
-    "id": 89,
-    "preguntaId": 30,
+    "id": "d11e3352-dcec-417e-ae59-18b87f760740",
+    "preguntaId": "cae1951c-0e54-48fa-99b5-e091e413cefc",
     "texto": "Italia",
     "correcta": false
   },
   {
-    "id": 90,
-    "preguntaId": 30,
+    "id": "e5085371-ccb8-4c05-a98f-685b37637270",
+    "preguntaId": "cae1951c-0e54-48fa-99b5-e091e413cefc",
     "texto": "Brasil",
     "correcta": false
   },
   {
-    "id": 91,
-    "preguntaId": 31,
+    "id": "9b5c0f48-d56f-4cec-bd2c-465f69d1b238",
+    "preguntaId": "8051eef9-964a-4b12-be5e-5eda050aeb55",
     "texto": "Leonardo da Vinci",
     "correcta": true
   },
   {
-    "id": 92,
-    "preguntaId": 31,
+    "id": "41a17ab9-309b-4960-84a0-4798f1ebf132",
+    "preguntaId": "8051eef9-964a-4b12-be5e-5eda050aeb55",
     "texto": "Miguel Ángel",
     "correcta": false
   },
   {
-    "id": 93,
-    "preguntaId": 31,
+    "id": "67e50df1-6968-4b99-b7b5-211c2f8ddea1",
+    "preguntaId": "8051eef9-964a-4b12-be5e-5eda050aeb55",
     "texto": "Rafael",
     "correcta": false
   },
   {
-    "id": 94,
-    "preguntaId": 32,
+    "id": "04a3bbb6-6c88-4c29-8336-b51820980aa8",
+    "preguntaId": "52a23046-06fb-4878-81f3-f3f9c5d49415",
     "texto": "Claude Monet",
     "correcta": false
   },
   {
-    "id": 95,
-    "preguntaId": 32,
+    "id": "1a23711b-5d19-4d2c-b130-e9277572641c",
+    "preguntaId": "52a23046-06fb-4878-81f3-f3f9c5d49415",
     "texto": "Paul Cézanne",
     "correcta": false
   },
   {
-    "id": 96,
-    "preguntaId": 32,
+    "id": "a6f807c7-262f-437b-ac9f-1bd89bea3e18",
+    "preguntaId": "52a23046-06fb-4878-81f3-f3f9c5d49415",
     "texto": "Vincent van Gogh",
     "correcta": true
   },
   {
-    "id": 97,
-    "preguntaId": 33,
+    "id": "fcb34382-3bf4-4814-a3a7-6ad5c8c6513d",
+    "preguntaId": "51c61720-b04c-4373-867c-ef992a77eaca",
     "texto": "Salvador Dalí",
     "correcta": false
   },
   {
-    "id": 98,
-    "preguntaId": 33,
+    "id": "85d1bd79-9a94-49ec-b922-dc3a7c33bc41",
+    "preguntaId": "51c61720-b04c-4373-867c-ef992a77eaca",
     "texto": "Pablo Picasso",
     "correcta": true
   },
   {
-    "id": 99,
-    "preguntaId": 33,
+    "id": "7fa9f7cb-f73d-4359-b8ef-21c7b61f9c90",
+    "preguntaId": "51c61720-b04c-4373-867c-ef992a77eaca",
     "texto": "Joan Miró",
     "correcta": false
   },
   {
-    "id": 100,
-    "preguntaId": 34,
+    "id": "8e97b60f-c4ca-4f90-a2c5-f1db333044dc",
+    "preguntaId": "dad47bcc-40ac-418b-bdad-36f19d4fca3a",
     "texto": "Frida Kahlo",
     "correcta": true
   },
   {
-    "id": 101,
-    "preguntaId": 34,
+    "id": "be3ec522-d5fb-4cb6-b46e-ce992aada87d",
+    "preguntaId": "dad47bcc-40ac-418b-bdad-36f19d4fca3a",
     "texto": "Remedios Varo",
     "correcta": false
   },
   {
-    "id": 102,
-    "preguntaId": 34,
+    "id": "d0e7f4e7-372a-4fcc-8271-4166b216ef8c",
+    "preguntaId": "dad47bcc-40ac-418b-bdad-36f19d4fca3a",
     "texto": "Leonora Carrington",
     "correcta": false
   },
   {
-    "id": 103,
-    "preguntaId": 35,
+    "id": "7faea711-1cf2-4c4c-a225-147165872881",
+    "preguntaId": "0b33264b-e507-4a0d-853f-13534d9adae2",
     "texto": "Futurismo",
     "correcta": false
   },
   {
-    "id": 104,
-    "preguntaId": 35,
+    "id": "f21c24cc-1dc0-4156-8107-019082628afc",
+    "preguntaId": "0b33264b-e507-4a0d-853f-13534d9adae2",
     "texto": "Realismo",
     "correcta": false
   },
   {
-    "id": 105,
-    "preguntaId": 35,
+    "id": "778717ae-c953-421b-b2a1-15eb31d7a0e3",
+    "preguntaId": "0b33264b-e507-4a0d-853f-13534d9adae2",
     "texto": "De Stijl",
+    "correcta": true
+  },
+  {
+    "id": "65ad9bf7-eb88-4926-aacd-faec1a5bba7c",
+    "preguntaId": "edb2c489-e7d6-409d-98c8-e5434e638d1d",
+    "texto": "Augusto",
     "correcta": true
   }
 ]

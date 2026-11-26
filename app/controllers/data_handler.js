@@ -3,9 +3,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const Category = require('./category');
-const Question = require('./question');
-const Respuesta = require('./respuesta');
+const Category = require('./categories');
+const Question = require('./questions');
+const Respuesta = require('./answers');
 
 // Rutas a los 3 archivos
 const pathCategorias = path.join(__dirname, '../data/categorias.json');

@@ -1,30 +1,30 @@
 [
   {
-    "id": 1,
+    "id": "a6224039-a1ba-4329-855b-34d22b77b26d",
     "nombre": "Historia"
   },
   {
-    "id": 2,
+    "id": "be4b0417-aa4b-408c-addb-2f2ca39c248a",
     "nombre": "Ciencia"
   },
   {
-    "id": 3,
+    "id": "cddc290d-4c52-4f99-8aa8-dd6bbd04b5ae",
     "nombre": "Geografía"
   },
   {
-    "id": 4,
+    "id": "dfd5caa2-dc1c-4532-a4af-1fa53e6cf1a0",
     "nombre": "Cultura pop"
   },
   {
-    "id": 5,
+    "id": "02e7fb29-210b-4ff3-9d3e-ef897204f35e",
     "nombre": "Literatura"
   },
   {
-    "id": 6,
+    "id": "7f07a80b-d177-4361-891c-06a0a62f6946",
     "nombre": "Deportes"
   },
   {
-    "id": 7,
+    "id": "17af9685-dd6e-431e-a001-45efa63c2893",
     "nombre": "Arte"
   }
 ]

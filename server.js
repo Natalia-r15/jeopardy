@@ -12,10 +12,12 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "app/views")));
 
-const router = require("./app/controllers/router"); 
+const viewsRouter = require("./app/routes/views");
+app.use(viewsRouter); 
 
+const router = require("./app/controllers/router"); 
 app.use(router);
 
 app.listen(port, () => {
-    console.log(`Jeopardy app listening on http://localhost:${port}`);
+    console.log(`Jeopardy app listening on port ${port}`);
 });

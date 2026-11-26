@@ -1,247 +1,290 @@
 [
   {
-    "id": 1,
-    "categoriaId": 1,
+    "id": "f4d98349-5327-4232-a468-7a676ee41ebd",
     "texto": "¿En qué país se construyeron las pirámides de Guiza?",
-    "dificultad": "Inicial",
-    "puntos": 100
+    "categoria": "a6224039-a1ba-4329-855b-34d22b77b26d",
+    "dificultad": "facil",
+    "puntos": 100,
+    "isRevealed": false
   },
   {
-    "id": 2,
-    "categoriaId": 1,
+    "id": "ab2717f5-ec76-40ab-ba28-acdfd56be348",
     "texto": "¿En qué año inició la Independencia de México?",
-    "dificultad": "Fácil",
-    "puntos": 200
+    "categoria": "a6224039-a1ba-4329-855b-34d22b77b26d",
+    "dificultad": "facil",
+    "puntos": 200,
+    "isRevealed": false
   },
   {
-    "id": 3,
-    "categoriaId": 1,
+    "id": "cc013891-3828-43be-ad05-21d3cda8b75a",
     "texto": "¿En qué año cayó el Muro de Berlín?",
-    "dificultad": "Media",
-    "puntos": 300
+    "categoria": "a6224039-a1ba-4329-855b-34d22b77b26d",
+    "dificultad": "media",
+    "puntos": 300,
+    "isRevealed": false
   },
   {
-    "id": 4,
-    "categoriaId": 1,
+    "id": "3b06b005-01e5-45dd-9822-254d91660241",
     "texto": "¿Qué civilización construyó Machu Picchu?",
-    "dificultad": "Difícil",
-    "puntos": 400
+    "categoria": "a6224039-a1ba-4329-855b-34d22b77b26d",
+    "dificultad": "dificil",
+    "puntos": 400,
+    "isRevealed": false
   },
   {
-    "id": 5,
-    "categoriaId": 1,
+    "id": "aa27cc69-0c52-4bab-93a0-a706b43d8e94",
     "texto": "¿En qué año se firmó la Carta Magna inglesa?",
-    "dificultad": "Experta",
-    "puntos": 500
+    "categoria": "a6224039-a1ba-4329-855b-34d22b77b26d",
+    "dificultad": "experta",
+    "puntos": 500,
+    "isRevealed": false
   },
   {
-    "id": 6,
-    "categoriaId": 2,
+    "id": "2008445f-4edf-482d-9b16-ac3006aee27b",
     "texto": "¿Cuál es el símbolo químico del oxígeno?",
-    "dificultad": "Inicial",
-    "puntos": 100
+    "categoria": "be4b0417-aa4b-408c-addb-2f2ca39c248a",
+    "dificultad": "facil",
+    "puntos": 100,
+    "isRevealed": false
   },
   {
-    "id": 7,
-    "categoriaId": 2,
+    "id": "d3ee4174-70bd-46ef-8370-6d7863c24924",
     "texto": "¿Qué planeta es el más grande del sistema solar?",
-    "dificultad": "Fácil",
-    "puntos": 200
+    "categoria": "be4b0417-aa4b-408c-addb-2f2ca39c248a",
+    "dificultad": "facil",
+    "puntos": 200,
+    "isRevealed": false
   },
   {
-    "id": 8,
-    "categoriaId": 2,
+    "id": "7aa8ad82-7eb2-4e28-a056-ba08894ee9e6",
     "texto": "¿Qué órgano produce insulina?",
-    "dificultad": "Media",
-    "puntos": 300
+    "categoria": "be4b0417-aa4b-408c-addb-2f2ca39c248a",
+    "dificultad": "media",
+    "puntos": 300,
+    "isRevealed": false
   },
   {
-    "id": 9,
-    "categoriaId": 2,
+    "id": "01438e8d-555a-4f20-84fc-dc3ea49b5383",
     "texto": "¿En qué unidad se mide la resistencia eléctrica?",
-    "dificultad": "Difícil",
-    "puntos": 400
+    "categoria": "be4b0417-aa4b-408c-addb-2f2ca39c248a",
+    "dificultad": "dificil",
+    "puntos": 400,
+    "isRevealed": false
   },
   {
-    "id": 10,
-    "categoriaId": 2,
+    "id": "d006da76-28f3-4c87-a947-e21d16b626df",
     "texto": "¿Qué partícula tiene carga eléctrica negativa?",
-    "dificultad": "Experta",
-    "puntos": 500
+    "categoria": "be4b0417-aa4b-408c-addb-2f2ca39c248a",
+    "dificultad": "experta",
+    "puntos": 500,
+    "isRevealed": false
   },
   {
-    "id": 11,
-    "categoriaId": 3,
+    "id": "5449e380-509f-41d7-9d10-a101fffb8a85",
     "texto": "¿Cuál es la capital de México?",
-    "dificultad": "Inicial",
-    "puntos": 100
+    "categoria": "cddc290d-4c52-4f99-8aa8-dd6bbd04b5ae",
+    "dificultad": "facil",
+    "puntos": 100,
+    "isRevealed": false
   },
   {
-    "id": 12,
-    "categoriaId": 3,
+    "id": "6d88e737-20e4-4fcc-95b7-d12c93a5262c",
     "texto": "¿En qué continente está Kenia?",
-    "dificultad": "Fácil",
-    "puntos": 200
+    "categoria": "cddc290d-4c52-4f99-8aa8-dd6bbd04b5ae",
+    "dificultad": "facil",
+    "puntos": 200,
+    "isRevealed": false
   },
   {
-    "id": 13,
-    "categoriaId": 3,
+    "id": "424c8b89-d2a9-4ca5-a99c-8d54356c4e53",
     "texto": "¿Cuál es la capital de Canadá?",
-    "dificultad": "Media",
-    "puntos": 300
+    "categoria": "cddc290d-4c52-4f99-8aa8-dd6bbd04b5ae",
+    "dificultad": "media",
+    "puntos": 300,
+    "isRevealed": false
   },
   {
-    "id": 14,
-    "categoriaId": 3,
+    "id": "4f7b8b0d-2383-4691-887b-477e2a4b0eee",
     "texto": "¿Qué país tiene como capital a Ulán Bator?",
-    "dificultad": "Difícil",
-    "puntos": 400
+    "categoria": "cddc290d-4c52-4f99-8aa8-dd6bbd04b5ae",
+    "dificultad": "dificil",
+    "puntos": 400,
+    "isRevealed": false
   },
   {
-    "id": 15,
-    "categoriaId": 3,
+    "id": "bc091d8d-9a4d-4629-8a3e-a3ae2818d3ef",
     "texto": "¿Qué estrecho separa España de Marruecos?",
-    "dificultad": "Experta",
-    "puntos": 500
+    "categoria": "cddc290d-4c52-4f99-8aa8-dd6bbd04b5ae",
+    "dificultad": "experta",
+    "puntos": 500,
+    "isRevealed": false
   },
   {
-    "id": 16,
-    "categoriaId": 4,
+    "id": "ab19424f-1440-4d64-8f3e-d04bf7a807da",
     "texto": "¿Cómo se llama el vaquero de Toy Story?",
-    "dificultad": "Inicial",
-    "puntos": 100
+    "categoria": "dfd5caa2-dc1c-4532-a4af-1fa53e6cf1a0",
+    "dificultad": "facil",
+    "puntos": 100,
+    "isRevealed": false
   },
   {
-    "id": 17,
-    "categoriaId": 4,
+    "id": "1ee6990e-6c89-439d-ae41-1289eaad5113",
     "texto": "¿En qué saga aparece Darth Vader?",
-    "dificultad": "Fácil",
-    "puntos": 200
+    "categoria": "dfd5caa2-dc1c-4532-a4af-1fa53e6cf1a0",
+    "dificultad": "facil",
+    "puntos": 200,
+    "isRevealed": false
   },
   {
-    "id": 18,
-    "categoriaId": 4,
+    "id": "9ca9fcdd-a32a-462b-bb8f-4ef49a76a4c3",
     "texto": "¿Qué grupo lanzó Bohemian Rhapsody?",
-    "dificultad": "Media",
-    "puntos": 300
+    "categoria": "dfd5caa2-dc1c-4532-a4af-1fa53e6cf1a0",
+    "dificultad": "media",
+    "puntos": 300,
+    "isRevealed": false
   },
   {
-    "id": 19,
-    "categoriaId": 4,
+    "id": "e3800412-bd79-462c-8540-27a4f575b118",
     "texto": "¿Quién dirigió El laberinto del fauno?",
-    "dificultad": "Difícil",
-    "puntos": 400
+    "categoria": "dfd5caa2-dc1c-4532-a4af-1fa53e6cf1a0",
+    "dificultad": "dificil",
+    "puntos": 400,
+    "isRevealed": false
   },
   {
-    "id": 20,
-    "categoriaId": 4,
+    "id": "6cdd5a7d-ecbb-4d12-a403-06dfbe261a54",
     "texto": "¿Qué álbum de estudio de Daft Punk salió en 2013?",
-    "dificultad": "Experta",
-    "puntos": 500
+    "categoria": "dfd5caa2-dc1c-4532-a4af-1fa53e6cf1a0",
+    "dificultad": "experta",
+    "puntos": 500,
+    "isRevealed": false
   },
   {
-    "id": 21,
-    "categoriaId": 5,
+    "id": "eed61125-00a8-4216-8521-7cf8ea958d4e",
     "texto": "¿Quién escribió Don Quijote de la Mancha?",
-    "dificultad": "Inicial",
-    "puntos": 100
+    "categoria": "02e7fb29-210b-4ff3-9d3e-ef897204f35e",
+    "dificultad": "facil",
+    "puntos": 100,
+    "isRevealed": false
   },
   {
-    "id": 22,
-    "categoriaId": 5,
+    "id": "d830dc5b-893d-4601-9722-82da8ca4fc1d",
     "texto": "¿Cómo se apellidan Romeo y Julieta?",
-    "dificultad": "Fácil",
-    "puntos": 200
+    "categoria": "02e7fb29-210b-4ff3-9d3e-ef897204f35e",
+    "dificultad": "facil",
+    "puntos": 200,
+    "isRevealed": false
   },
   {
-    "id": 23,
-    "categoriaId": 5,
+    "id": "534f72e2-0783-48f8-933c-69cf3b4e6dea",
     "texto": "¿Quién escribió Cien años de soledad?",
-    "dificultad": "Media",
-    "puntos": 300
+    "categoria": "02e7fb29-210b-4ff3-9d3e-ef897204f35e",
+    "dificultad": "media",
+    "puntos": 300,
+    "isRevealed": false
   },
   {
-    "id": 24,
-    "categoriaId": 5,
+    "id": "0084a552-9f78-4cac-973f-4b039206624d",
     "texto": "¿En qué pueblo transcurre Pedro Páramo?",
-    "dificultad": "Difícil",
-    "puntos": 400
+    "categoria": "02e7fb29-210b-4ff3-9d3e-ef897204f35e",
+    "dificultad": "dificil",
+    "puntos": 400,
+    "isRevealed": false
   },
   {
-    "id": 25,
-    "categoriaId": 5,
+    "id": "85afcd6c-2ce5-4950-846f-4a86ac49e605",
     "texto": "¿Quién escribió El libro de arena?",
-    "dificultad": "Experta",
-    "puntos": 500
+    "categoria": "02e7fb29-210b-4ff3-9d3e-ef897204f35e",
+    "dificultad": "experta",
+    "puntos": 500,
+    "isRevealed": false
   },
   {
-    "id": 26,
-    "categoriaId": 6,
+    "id": "6a99d361-1d45-4778-b6c9-a129253db8ea",
     "texto": "¿Cuántos jugadores por equipo inician un partido de fútbol en cancha?",
-    "dificultad": "Inicial",
-    "puntos": 100
+    "categoria": "7f07a80b-d177-4361-891c-06a0a62f6946",
+    "dificultad": "facil",
+    "puntos": 100,
+    "isRevealed": false
   },
   {
-    "id": 27,
-    "categoriaId": 6,
+    "id": "964775bf-c78f-4628-8261-25cced87d5ce",
     "texto": "¿En qué deporte compite la NBA?",
-    "dificultad": "Fácil",
-    "puntos": 200
+    "categoria": "7f07a80b-d177-4361-891c-06a0a62f6946",
+    "dificultad": "facil",
+    "puntos": 200,
+    "isRevealed": false
   },
   {
-    "id": 28,
-    "categoriaId": 6,
+    "id": "d3ad5b28-bfa1-4af4-9862-9af143dceed7",
     "texto": "¿En qué superficie se juega Wimbledon?",
-    "dificultad": "Media",
-    "puntos": 300
+    "categoria": "7f07a80b-d177-4361-891c-06a0a62f6946",
+    "dificultad": "media",
+    "puntos": 300,
+    "isRevealed": false
   },
   {
-    "id": 29,
-    "categoriaId": 6,
+    "id": "34181498-0e0f-4d72-a3eb-a7aa23334331",
     "texto": "¿Cuántas pruebas tiene un decatlón?",
-    "dificultad": "Difícil",
-    "puntos": 400
+    "categoria": "7f07a80b-d177-4361-891c-06a0a62f6946",
+    "dificultad": "dificil",
+    "puntos": 400,
+    "isRevealed": false
   },
   {
-    "id": 30,
-    "categoriaId": 6,
+    "id": "cae1951c-0e54-48fa-99b5-e091e413cefc",
     "texto": "¿Qué país ganó el primer Mundial masculino de fútbol?",
-    "dificultad": "Experta",
-    "puntos": 500
+    "categoria": "7f07a80b-d177-4361-891c-06a0a62f6946",
+    "dificultad": "experta",
+    "puntos": 500,
+    "isRevealed": false
   },
   {
-    "id": 31,
-    "categoriaId": 7,
+    "id": "8051eef9-964a-4b12-be5e-5eda050aeb55",
     "texto": "¿Quién pintó la Mona Lisa?",
-    "dificultad": "Inicial",
-    "puntos": 100
+    "categoria": "17af9685-dd6e-431e-a001-45efa63c2893",
+    "dificultad": "facil",
+    "puntos": 100,
+    "isRevealed": true
   },
   {
-    "id": 32,
-    "categoriaId": 7,
+    "id": "52a23046-06fb-4878-81f3-f3f9c5d49415",
     "texto": "¿Quién pintó La noche estrellada?",
-    "dificultad": "Fácil",
-    "puntos": 200
+    "categoria": "17af9685-dd6e-431e-a001-45efa63c2893",
+    "dificultad": "facil",
+    "puntos": 200,
+    "isRevealed": false
   },
   {
-    "id": 33,
-    "categoriaId": 7,
+    "id": "51c61720-b04c-4373-867c-ef992a77eaca",
     "texto": "¿Quién pintó Guernica?",
-    "dificultad": "Media",
-    "puntos": 300
+    "categoria": "17af9685-dd6e-431e-a001-45efa63c2893",
+    "dificultad": "media",
+    "puntos": 300,
+    "isRevealed": false
   },
   {
-    "id": 34,
-    "categoriaId": 7,
+    "id": "dad47bcc-40ac-418b-bdad-36f19d4fca3a",
     "texto": "¿Qué artista pintó Las dos Fridas?",
-    "dificultad": "Difícil",
-    "puntos": 400
+    "categoria": "17af9685-dd6e-431e-a001-45efa63c2893",
+    "dificultad": "dificil",
+    "puntos": 400,
+    "isRevealed": false
   },
   {
-    "id": 35,
-    "categoriaId": 7,
+    "id": "0b33264b-e507-4a0d-853f-13534d9adae2",
     "texto": "¿Con qué movimiento se asocia a Piet Mondrian?",
-    "dificultad": "Experta",
-    "puntos": 500
+    "categoria": "17af9685-dd6e-431e-a001-45efa63c2893",
+    "dificultad": "experta",
+    "puntos": 500,
+    "isRevealed": false
+  },
+  {
+    "id": "edb2c489-e7d6-409d-98c8-e5434e638d1d",
+    "texto": "¿Quién fue el primer emperador romano?",
+    "categoria": "a6224039-a1ba-4329-855b-34d22b77b26d",
+    "dificultad": "dificil",
+    "puntos": 300,
+    "isRevealed": false
   }
 ]
