@@ -4,41 +4,36 @@ const express = require('express');
 const router = express.Router();
 const dataHandler = require('./../controllers/data_handler');
 
-// Obtener el tablero completo (todas las categorías y las preguntas)
+// Obtener el tablero completo, todas las categorías y las preguntas
 router.route('/')
-    .get((req, res) => {
+    .get(async (req, res) => {
         let query = req.query.filter;
         let board;
 
+        try {
+            board = await dataHandler.getBoard();
+        } catch (e) {
+            return res.status(500).send('No se pudo obtener el tablero de Jeopardy.');
+        }
+
         if (query === undefined) {
-            try {
-                board = dataHandler.getBoard();
-            } catch (e) {
-                return res.status(400).send('No se pudo obtener el tablero de Jeopardy.');
-            }
             res.status(200).json(board);
         } else {
-            try {
-                board = dataHandler.getBoard();
-                let search = query.toLowerCase();
+            let search = query.toLowerCase();
 
-                // Filtrar categorías cuyo nombre coincida con la búsqueda
-                let filteredBoard = board.filter(category => {
-                    let categoryName = category.nombre ? category.nombre.toLowerCase() : "";
-                    return categoryName.includes(search);
-                });
+            // Filtrar categorías cuyo nombre coincida con la búsqueda
+            let filteredBoard = board.filter(category => {
+                let categoryName = category.nombre ? category.nombre.toLowerCase() : "";
+                return categoryName.includes(search);
+            });
 
-                res.status(200).json(filteredBoard);
-            } catch (e) {
-                console.log("ERROR: ", e);
-                return res.status(400).send('No se pudo obtener o filtrar el tablero.');
-            }
+            res.status(200).json(filteredBoard);
         }
     });
 
-// Obtener varias preguntas por sus IDs
+// Obtener múltiples preguntas por sus IDs
 router.route('/questions')
-    .post((req, res) => {
+    .post(async (req, res) => {
         let queIds = req.body.queIds;
         let questions = [];
 
@@ -46,38 +41,47 @@ router.route('/questions')
             return res.status(400).send("El campo 'queIds' es obligatorio y debe ser un array.");
         }
 
-        for (let id of queIds) {
-            let question = dataHandler.getQuestionById(id);
-            if (question != undefined) {
-                questions.push(question);
-            } else {
-                return res.status(404).send(`Pregunta con id '${id}' no encontrada.`);
+        try {
+            for (let id of queIds) {
+                let question = await dataHandler.getQuestionById(id);
+                if (question != undefined) {
+                    questions.push(question);
+                } else {
+                    return res.status(404).send(`Pregunta con id '${id}' no encontrada.`);
+                }
             }
+            return res.status(200).json(questions);
+        } catch (e) {
+            console.log("ERROR: ", e);
+            return res.status(500).send('No se pudo obtener las preguntas.');
         }
-
-        return res.status(200).json(questions);
     });
 
 // Obtener una categoría específica por su ID
 router.route('/:id')
-    .get((req, res) => {
+    .get(async (req, res) => {
         let id = req.params.id;
-        let category = dataHandler.getCategoryById(id);
+        
+        try {
+            let category = await dataHandler.getCategoryById(id);
 
-        if (category != undefined) {
-            res.status(200).json(category);
-        } else {
-            res.status(404).send(`Categoría con id '${id}' no encontrada.`);
+            if (category != undefined) {
+                res.status(200).json(category);
+            } else {
+                res.status(404).send(`Categoría con id '${id}' no encontrada.`);
+            }
+        } catch (e) {
+            res.status(500).send("Error al buscar la categoría.");
         }
     });
 
 // Marcar una pregunta como respondida
 router.route('/question/:id/reveal')
-    .put((req, res) => {
+    .put(async (req, res) => {
         let queId = req.params.id;
         
         try {
-            let updatedQuestion = dataHandler.markQuestionAsRevealed(queId);
+            let updatedQuestion = await dataHandler.markQuestionAsRevealed(queId);
             
             if (updatedQuestion) {
                 res.status(200).json(updatedQuestion);
@@ -86,7 +90,7 @@ router.route('/question/:id/reveal')
             }
         } catch (e) {
             console.log("ERROR:", e);
-            res.status(400).send('No se pudo actualizar el estado de la pregunta.');
+            res.status(500).send('No se pudo actualizar el estado de la pregunta.');
         }
     });
 

@@ -1,153 +1,133 @@
 "use strict";
 
-const fs = require('fs');
-const path = require('path');
-
-const Category = require('./categories');
-const Question = require('./questions');
-const Respuesta = require('./answers');
-
-// Rutas a los 3 archivos
-const pathCategorias = path.join(__dirname, '../data/categorias.json');
-const pathPreguntas = path.join(__dirname, '../data/preguntas.json');
-const pathRespuestas = path.join(__dirname, '../data/respuestas.json');
-
-// Cargar y convertir a instancias de clase al iniciar
-let categorias = JSON.parse(fs.readFileSync(pathCategorias, 'utf8')).map(Category.createFromObject);
-let preguntas = JSON.parse(fs.readFileSync(pathPreguntas, 'utf8')).map(Question.createFromObject);
-let respuestas = JSON.parse(fs.readFileSync(pathRespuestas, 'utf8')).map(Respuesta.createFromObject);
-
-// Funciones para guardar cambios
-function saveCategorias() {
-    fs.writeFileSync(pathCategorias, JSON.stringify(categorias.map(c => c.toObject()), null, 2), 'utf8');
-}
-function savePreguntas() {
-    fs.writeFileSync(pathPreguntas, JSON.stringify(preguntas.map(q => q.toObject()), null, 2), 'utf8');
-}
-function saveRespuestas() {
-    fs.writeFileSync(pathRespuestas, JSON.stringify(respuestas.map(r => r.toObject()), null, 2), 'utf8');
-}
+const Category = require('../models/Category');
+const Question = require('../models/Question');
+const Respuesta = require('../models/Respuesta');
 
 // CATEGORÍAS
-function getCategories() { return categorias.map(c => c.toObject()); }
 
-function getCategoryById(categoryId) {
-    const cat = categorias.find(c => c.id === categoryId);
-    return cat ? cat.toObject() : undefined;
+async function getCategories() {
+    return await Category.find();
 }
 
-function addCategory(nombre) {
-    const newCategory = new Category(nombre);
-    categorias.push(newCategory);
-    saveCategorias();
-    return newCategory.toObject();
+async function getCategoryById(categoryId) {
+    return await Category.findById(categoryId);
 }
 
-function updateCategory(categoryId, updatedData) {
-    const cat = categorias.find(c => c.id === categoryId);
-    if (!cat) throw new Error("Categoría no encontrada.");
-    
-    if (updatedData.nombre !== undefined) cat.nombre = updatedData.nombre;
-    saveCategorias();
-    return cat.toObject();
+async function addCategory(nombre) {
+    return await Category.create({ nombre });
 }
 
-function deleteCategory(categoryId) {
-    const index = categorias.findIndex(c => c.id === categoryId);
-    if (index === -1) throw new Error("Categoría no encontrada.");
-    
-    const catEliminada = categorias[index].toObject();
-    categorias.splice(index, 1);
-    saveCategorias();
+async function updateCategory(categoryId, updatedData) {
+    return await Category.findByIdAndUpdate(categoryId, updatedData, { returnDocument: 'after' });
+}
 
-    const preguntasAEliminar = preguntas.filter(p => p.categoria === categoryId);
-    preguntasAEliminar.forEach(p => deleteQuestion(p.id, false));
+async function deleteCategory(categoryId) {
+    // Encontrar preguntas de esta categoría
+    const preguntas = await Question.find({ categoria: categoryId });
+    const questionIds = preguntas.map(q => q._id);
     
-    savePreguntas();
-    saveRespuestas();
-    return catEliminada;
+    // Borrar respuestas de esas preguntas
+    await Respuesta.deleteMany({ pregunta: { $in: questionIds } });
+    
+    // Borrar preguntas
+    await Question.deleteMany({ categoria: categoryId });
+    
+    // Borrar categoría
+    return await Category.findByIdAndDelete(categoryId);
 }
 
 // PREGUNTAS Y TABLERO
-function getBoard() {
-    return categorias.map(cat => {
-        const preguntasDeCat = preguntas.filter(p => p.categoria === cat.id);
-        const preguntasCompletas = preguntasDeCat.map(p => {
-            const respCorrecta = respuestas.find(r => r.preguntaId === p.id && r.correcta === true);
-            return {
-                ...p.toObject(),
-                respuesta: respCorrecta ? respCorrecta.texto : "Sin respuesta correcta"
-            };
+
+async function getBoard() {
+    const categorias = await Category.find();
+    const board = [];
+
+    for (let cat of categorias) {
+        const preguntas = await Question.find({ categoria: cat._id });
+        const preguntasCompletas = [];
+
+        for (let preg of preguntas) {
+            const respCorrecta = await Respuesta.findOne({ pregunta: preg._id, correcta: true });
+            
+            // Construir el objeto
+            preguntasCompletas.push({
+                id: preg._id,
+                texto: preg.texto,
+                categoria: preg.categoria,
+                dificultad: preg.dificultad,
+                puntos: preg.puntos,
+                isRevealed: preg.isRevealed,
+                respuesta: respCorrecta ? respCorrecta.texto : "Sin respuesta"
+            });
+        }
+
+        // Construir
+        board.push({
+            id: cat._id,
+            nombre: cat.nombre,
+            questions: preguntasCompletas
         });
-        return { ...cat.toObject(), questions: preguntasCompletas };
-    });
+    }
+
+    return board;
 }
 
-function getQuestionById(questionId) {
-    const p = preguntas.find(q => q.id === questionId);
-    if (!p) return undefined;
+async function getQuestionById(questionId) {
+    const pregunta = await Question.findById(questionId);
+    if (!pregunta) return undefined;
+
+    const respCorrecta = await Respuesta.findOne({ pregunta: pregunta._id, correcta: true });
     
-    const respCorrecta = respuestas.find(r => r.preguntaId === questionId && r.correcta === true);
     return {
-        ...p.toObject(),
-        respuesta: respCorrecta ? respCorrecta.texto : "Sin respuesta correcta"
+        id: pregunta._id,
+        texto: pregunta.texto,
+        categoria: pregunta.categoria,
+        dificultad: pregunta.dificultad,
+        puntos: pregunta.puntos,
+        isRevealed: pregunta.isRevealed,
+        respuesta: respCorrecta ? respCorrecta.texto : "Sin respuesta"
     };
 }
 
-function addQuestion(categoryId, questionData, answerText) {
-    if (!categorias.find(c => c.id === categoryId)) throw new Error("Categoría no encontrada.");
-    
-    // La clase Question valida texto, dificultad, puntos, etc.
-    const newQuestion = new Question(questionData.texto, categoryId, questionData.dificultad, questionData.puntos);
-    preguntas.push(newQuestion);
-    savePreguntas();
-
-    // La clase Respuesta valida que correcta sea true o false y el UUID sea válido
-    const newRespuesta = new Respuesta(newQuestion.id, answerText, true);
-    respuestas.push(newRespuesta);
-    saveRespuestas();
-
-    return newQuestion.toObject();
-}
-
-function updateQuestion(questionId, updatedData) {
-    const q = preguntas.find(p => p.id === questionId);
-    if (!q) throw new Error("Pregunta no encontrada.");
-
-    if (updatedData.texto !== undefined) q.texto = updatedData.texto;
-    if (updatedData.dificultad !== undefined) q.dificultad = updatedData.dificultad;
-    if (updatedData.puntos !== undefined) q.puntos = updatedData.puntos;
-    if (updatedData.categoria !== undefined) q.categoria = updatedData.categoria;
-    if (updatedData.isRevealed !== undefined) q.isRevealed = updatedData.isRevealed;
-    
-    savePreguntas();
-    return q.toObject();
-}
-
-function deleteQuestion(questionId, saveNow = true) {
-    const index = preguntas.findIndex(p => p.id === questionId);
-    if (index === -1) throw new Error("Pregunta no encontrada.");
-
-    const pregEliminada = preguntas[index].toObject();
-    preguntas.splice(index, 1);
-    if (saveNow) savePreguntas();
-
-    // Eliminar respuestas asociadas
-    const respAEliminar = respuestas.filter(r => r.preguntaId === questionId);
-    respAEliminar.forEach(r => {
-        const rIndex = respuestas.findIndex(resp => resp.id === r.id);
-        if (rIndex !== -1) respuestas.splice(rIndex, 1);
+async function addQuestion(categoryId, questionData, answerText) {
+    // Crear pregunta
+    const newQuestion = await Question.create({
+        texto: questionData.texto,
+        categoria: categoryId,
+        dificultad: questionData.dificultad,
+        puntos: questionData.puntos
     });
-    if (saveNow) saveRespuestas();
 
-    return pregEliminada;
+    // Crear respuesta
+    await Respuesta.create({
+        texto: answerText,
+        pregunta: newQuestion._id,
+        correcta: true
+    });
+
+    return newQuestion;
 }
 
-function markQuestionAsRevealed(questionId) {
-    return updateQuestion(questionId, { isRevealed: true });
+async function updateQuestion(questionId, updatedData) {
+    // 'runValidators: true' es para que respete el enum y otras reglas
+    return await Question.findByIdAndUpdate(questionId, updatedData, { 
+        returnDocument: 'after', 
+        runValidators: true 
+    });
+}
+
+async function deleteQuestion(questionId) {
+    await Respuesta.deleteMany({ pregunta: questionId });
+    return await Question.findByIdAndDelete(questionId);
+}
+
+async function markQuestionAsRevealed(questionId) {
+    return await Question.findByIdAndUpdate(questionId, { isRevealed: true }, { returnDocument: 'after' });
 }
 
 module.exports = {
     getCategories, getCategoryById, addCategory, updateCategory, deleteCategory,
-    getBoard, getQuestionById, addQuestion, updateQuestion, deleteQuestion, markQuestionAsRevealed
+    getBoard, getQuestionById, addQuestion, 
+    updateQuestion, deleteQuestion, markQuestionAsRevealed
 };

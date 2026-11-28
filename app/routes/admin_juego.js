@@ -6,7 +6,7 @@ const dataHandler = require('./../controllers/data_handler');
 
 // Crear una nueva categoría
 router.route('/categories')
-    .post((req, res) => {
+    .post(async (req, res) => {
         const { nombre } = req.body;
 
         if (!nombre) {
@@ -14,7 +14,7 @@ router.route('/categories')
         }
 
         try {
-            const newCategory = dataHandler.addCategory(nombre);
+            const newCategory = await dataHandler.addCategory(nombre);
             return res.status(201).json({ 
                 message: `Categoría '${newCategory.nombre}' creada exitosamente.`, 
                 data: newCategory 
@@ -24,15 +24,15 @@ router.route('/categories')
         }
     });
 
-// Eliminar una categoría (y todas sus preguntas/respuestas en cascada)
+// Eliminar una categoría
 router.route('/categories/:id')
-    .delete((req, res) => {
+    .delete(async (req, res) => {
         const id = req.params.id;
 
         try {
-            const deletedCategory = dataHandler.deleteCategory(id);
+            const deletedCategory = await dataHandler.deleteCategory(id);
             return res.status(200).json({ 
-                message: `Categoría '${deletedCategory.nombre}' y su contenido eliminados exitosamente.`, 
+                message: `Categoría y su contenido eliminados exitosamente.`, 
                 data: deletedCategory 
             });
         } catch (e) {
@@ -40,17 +40,16 @@ router.route('/categories/:id')
         }
     });
 
-// Crear una nueva pregunta y su respuesta
+
+// Crear una nueva pregunta
 router.route('/questions')
-    .post((req, res) => {
+    .post(async (req, res) => {
         const { categoryId, questionData, answerText } = req.body;
 
-        // 1. Validar que existan los campos principales
         if (!categoryId || !questionData || !answerText) {
             return res.status(400).send("Bad request. Faltan campos: 'categoryId', 'questionData' o 'answerText'.");
         }
 
-        // Validar campos específicos de la pregunta
         const requiredQuestionFields = ['texto', 'dificultad', 'puntos'];
         const missingFields = requiredQuestionFields.filter(field => !questionData[field]);
 
@@ -59,10 +58,7 @@ router.route('/questions')
         }
 
         try {
-            // El dataHandler se encarga de hacer las validaciones correspondientes
-
-            const newQuestion = dataHandler.addQuestion(categoryId, questionData, answerText);
-            
+            const newQuestion = await dataHandler.addQuestion(categoryId, questionData, answerText);
             return res.status(201).json({ 
                 message: "Pregunta y respuesta creadas exitosamente.", 
                 data: newQuestion 
@@ -72,19 +68,18 @@ router.route('/questions')
         }
     });
 
-// Actualizar o eliminar una pregunta
+// Actualizar o Eliminar una pregunta
 router.route('/questions/:id')
-    .put((req, res) => {
+    .put(async (req, res) => {
         const id = req.params.id;
         const questionData = req.body; 
 
-        // En una actualización, no todos los campos son obligatorios, pero al menos debe haber uno
         if (Object.keys(questionData).length === 0) {
             return res.status(400).send("Bad request. Debe proporcionar al menos un campo para actualizar.");
         }
 
         try {
-            const updatedQuestion = dataHandler.updateQuestion(id, questionData);
+            const updatedQuestion = await dataHandler.updateQuestion(id, questionData);
             return res.status(200).json({ 
                 message: "Pregunta actualizada exitosamente.", 
                 data: updatedQuestion 
@@ -94,11 +89,11 @@ router.route('/questions/:id')
         }
     })
     
-    .delete((req, res) => {
+    .delete(async (req, res) => {
         const id = req.params.id;
 
         try {
-            const deletedQuestion = dataHandler.deleteQuestion(id);
+            const deletedQuestion = await dataHandler.deleteQuestion(id);
             return res.status(200).json({ 
                 message: "Pregunta y sus respuestas asociadas eliminadas exitosamente.", 
                 data: deletedQuestion 
